@@ -1,0 +1,527 @@
+2025-12-17 15:02:36 - INFO - 
+================================================================================
+2025-12-17 15:02:36 - INFO - НЭВТРЭХ: BERT_UNCASED ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - RANDOM FOREST
+2025-12-17 15:02:36 - INFO - ================================================================================
+2025-12-17 15:02:36 - INFO - Огноо ба цаг: 2025-12-17 15:02:36
+2025-12-17 15:02:36 - INFO - Эмбеддингийн төрөл: bert_uncased
+2025-12-17 15:02:36 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 15:02:36 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 15:02:36 - DEBUG - [bert_uncased] Параметрүүдийн Grid:
+2025-12-17 15:02:36 - DEBUG - {
+  "n_estimators": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400"
+  ],
+  "max_depth": [
+    "10",
+    "20"
+  ],
+  "min_samples_split": [
+    "2",
+    "5"
+  ],
+  "min_samples_leaf": [
+    "1"
+  ],
+  "max_features": [
+    "sqrt"
+  ]
+}
+2025-12-17 15:02:36 - INFO - [bert_uncased] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 15:02:36 - INFO - [bert_uncased] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 15:02:36 - INFO - [bert_uncased] Random Forest модел үүсгэж байна...
+2025-12-17 15:02:36 - INFO - [bert_uncased] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 15:02:36 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-17 15:30:00 - INFO - --------------------------------------------------------------------------------
+2025-12-17 15:30:00 - INFO - [bert_uncased] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 15:30:00 - INFO - --------------------------------------------------------------------------------
+2025-12-17 15:30:00 - INFO - [bert_uncased] Best CV Score: 0.7831
+2025-12-17 15:30:00 - INFO - [bert_uncased] Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400}
+2025-12-17 15:30:00 - INFO - [bert_uncased] Training Time: 1644.10 sec (27.40 min)
+2025-12-17 15:30:00 - INFO - [bert_uncased] Top 5 Configurations:
+2025-12-17 15:30:00 - INFO - [bert_uncased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400} → Score: 0.7831 (±0.0026)
+2025-12-17 15:30:00 - INFO - [bert_uncased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400} → Score: 0.7816 (±0.0025)
+2025-12-17 15:30:00 - INFO - [bert_uncased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300} → Score: 0.7815 (±0.0037)
+2025-12-17 15:30:00 - INFO - [bert_uncased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 300} → Score: 0.7812 (±0.0033)
+2025-12-17 15:30:00 - INFO - [bert_uncased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200} → Score: 0.7802 (±0.0040)
+2025-12-17 15:30:00 - INFO - --------------------------------------------------------------------------------
+2025-12-17 15:30:00 - INFO - [bert_uncased] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 15:30:00 - INFO - --------------------------------------------------------------------------------
+2025-12-17 15:30:00 - INFO - [bert_uncased] Test set дээр үнэлж байна...
+2025-12-17 15:30:00 - INFO - [bert_uncased] Test Accuracy: 0.7824
+2025-12-17 15:30:00 - INFO - [bert_uncased] Classification Report:
+2025-12-17 15:30:00 - INFO - [bert_uncased]                 precision    recall  f1-score   support
+2025-12-17 15:30:00 - INFO - [bert_uncased]       Negative       0.79      0.77      0.78      5000
+2025-12-17 15:30:00 - INFO - [bert_uncased]       Positive       0.78      0.79      0.78      5000
+2025-12-17 15:30:00 - INFO - [bert_uncased]       accuracy                           0.78     10000
+2025-12-17 15:30:00 - INFO - [bert_uncased]      macro avg       0.78      0.78      0.78     10000
+2025-12-17 15:30:00 - INFO - [bert_uncased]   weighted avg       0.78      0.78      0.78     10000
+2025-12-17 15:30:00 - INFO - [bert_uncased] Confusion Matrix:
+2025-12-17 15:30:00 - INFO - [bert_uncased]   TN= 3874 | FP= 1126
+2025-12-17 15:30:00 - INFO - [bert_uncased]   FN= 1050 | TP= 3950
+2025-12-17 15:30:00 - INFO - [bert_uncased] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 15:30:00 - DEBUG - [bert_uncased] Дэлгэрэнгүй grid search үр дүн: logs/detailed_rf_bert_uncased_20251217_150236.csv
+2025-12-17 15:30:01 - INFO - [bert_uncased] Шилдэг модел: models/best_rf_bert_uncased_20251217_150236.pkl
+2025-12-17 15:30:01 - INFO - [bert_uncased] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 15:30:01 - INFO - ================================================================================
+
+2025-12-17 15:36:24 - INFO - 
+================================================================================
+2025-12-17 15:36:24 - INFO - НЭВТРЭХ: HATEBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - RANDOM FOREST
+2025-12-17 15:36:24 - INFO - ================================================================================
+2025-12-17 15:36:24 - INFO - Огноо ба цаг: 2025-12-17 15:36:24
+2025-12-17 15:36:24 - INFO - Эмбеддингийн төрөл: hatebert
+2025-12-17 15:36:24 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 15:36:24 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 15:36:24 - DEBUG - [hatebert] Параметрүүдийн Grid:
+2025-12-17 15:36:24 - DEBUG - {
+  "n_estimators": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400"
+  ],
+  "max_depth": [
+    "10",
+    "20"
+  ],
+  "min_samples_split": [
+    "2",
+    "5"
+  ],
+  "min_samples_leaf": [
+    "1"
+  ],
+  "max_features": [
+    "sqrt"
+  ]
+}
+2025-12-17 15:36:24 - INFO - [hatebert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 15:36:24 - INFO - [hatebert] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 15:36:24 - INFO - [hatebert] Random Forest модел үүсгэж байна...
+2025-12-17 15:36:24 - INFO - [hatebert] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 15:36:24 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-17 15:39:13 - INFO - 
+================================================================================
+2025-12-17 15:39:13 - INFO - НЭВТРЭХ: HATEBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - RANDOM FOREST
+2025-12-17 15:39:13 - INFO - ================================================================================
+2025-12-17 15:39:13 - INFO - Огноо ба цаг: 2025-12-17 15:39:13
+2025-12-17 15:39:13 - INFO - Эмбеддингийн төрөл: hatebert
+2025-12-17 15:39:13 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 15:39:13 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 15:39:13 - DEBUG - [hatebert] Параметрүүдийн Grid:
+2025-12-17 15:39:13 - DEBUG - {
+  "n_estimators": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400"
+  ],
+  "max_depth": [
+    "10",
+    "20"
+  ],
+  "min_samples_split": [
+    "2",
+    "5"
+  ],
+  "min_samples_leaf": [
+    "1"
+  ],
+  "max_features": [
+    "sqrt"
+  ]
+}
+2025-12-17 15:39:13 - INFO - [hatebert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 15:39:13 - INFO - [hatebert] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 15:39:13 - INFO - [hatebert] Random Forest модел үүсгэж байна...
+2025-12-17 15:39:13 - INFO - [hatebert] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 15:39:13 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-17 16:14:49 - INFO - --------------------------------------------------------------------------------
+2025-12-17 16:14:49 - INFO - [hatebert] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 16:14:49 - INFO - --------------------------------------------------------------------------------
+2025-12-17 16:14:49 - INFO - [hatebert] Best CV Score: 0.7802
+2025-12-17 16:14:49 - INFO - [hatebert] Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400}
+2025-12-17 16:14:49 - INFO - [hatebert] Training Time: 2135.93 sec (35.60 min)
+2025-12-17 16:14:49 - INFO - [hatebert] Top 5 Configurations:
+2025-12-17 16:14:49 - INFO - [hatebert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400} → Score: 0.7802 (±0.0032)
+2025-12-17 16:14:49 - INFO - [hatebert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400} → Score: 0.7800 (±0.0020)
+2025-12-17 16:14:49 - INFO - [hatebert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 300} → Score: 0.7796 (±0.0023)
+2025-12-17 16:14:49 - INFO - [hatebert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300} → Score: 0.7790 (±0.0033)
+2025-12-17 16:14:49 - INFO - [hatebert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 200} → Score: 0.7788 (±0.0035)
+2025-12-17 16:14:49 - INFO - --------------------------------------------------------------------------------
+2025-12-17 16:14:49 - INFO - [hatebert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 16:14:49 - INFO - --------------------------------------------------------------------------------
+2025-12-17 16:14:49 - INFO - [hatebert] Test set дээр үнэлж байна...
+2025-12-17 16:14:50 - INFO - [hatebert] Test Accuracy: 0.7837
+2025-12-17 16:14:50 - INFO - [hatebert] Classification Report:
+2025-12-17 16:14:50 - INFO - [hatebert]                 precision    recall  f1-score   support
+2025-12-17 16:14:50 - INFO - [hatebert]       Negative       0.81      0.75      0.78      5000
+2025-12-17 16:14:50 - INFO - [hatebert]       Positive       0.76      0.82      0.79      5000
+2025-12-17 16:14:50 - INFO - [hatebert]       accuracy                           0.78     10000
+2025-12-17 16:14:50 - INFO - [hatebert]      macro avg       0.79      0.78      0.78     10000
+2025-12-17 16:14:50 - INFO - [hatebert]   weighted avg       0.79      0.78      0.78     10000
+2025-12-17 16:14:50 - INFO - [hatebert] Confusion Matrix:
+2025-12-17 16:14:50 - INFO - [hatebert]   TN= 3730 | FP= 1270
+2025-12-17 16:14:50 - INFO - [hatebert]   FN=  893 | TP= 4107
+2025-12-17 16:14:50 - INFO - [hatebert] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 16:14:50 - DEBUG - [hatebert] Дэлгэрэнгүй grid search үр дүн: logs/detailed_rf_hatebert_20251217_153913.csv
+2025-12-17 16:14:50 - INFO - [hatebert] Шилдэг модел: models/best_rf_hatebert_20251217_153913.pkl
+2025-12-17 16:14:50 - INFO - [hatebert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 16:14:50 - INFO - ================================================================================
+
+2025-12-17 16:20:15 - INFO - 
+================================================================================
+2025-12-17 16:20:15 - INFO - НЭВТРЭХ: BERT_CASED ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - RANDOM FOREST
+2025-12-17 16:20:15 - INFO - ================================================================================
+2025-12-17 16:20:15 - INFO - Огноо ба цаг: 2025-12-17 16:20:15
+2025-12-17 16:20:15 - INFO - Эмбеддингийн төрөл: bert_cased
+2025-12-17 16:20:15 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 16:20:15 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 16:20:15 - DEBUG - [bert_cased] Параметрүүдийн Grid:
+2025-12-17 16:20:15 - DEBUG - {
+  "n_estimators": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400"
+  ],
+  "max_depth": [
+    "10",
+    "20"
+  ],
+  "min_samples_split": [
+    "2",
+    "5"
+  ],
+  "min_samples_leaf": [
+    "1"
+  ],
+  "max_features": [
+    "sqrt"
+  ]
+}
+2025-12-17 16:20:15 - INFO - [bert_cased] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 16:20:15 - INFO - [bert_cased] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 16:20:15 - INFO - [bert_cased] Random Forest модел үүсгэж байна...
+2025-12-17 16:20:15 - INFO - [bert_cased] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 16:20:15 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-17 16:47:18 - INFO - --------------------------------------------------------------------------------
+2025-12-17 16:47:18 - INFO - [bert_cased] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 16:47:18 - INFO - --------------------------------------------------------------------------------
+2025-12-17 16:47:18 - INFO - [bert_cased] Best CV Score: 0.7151
+2025-12-17 16:47:18 - INFO - [bert_cased] Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400}
+2025-12-17 16:47:18 - INFO - [bert_cased] Training Time: 1622.53 sec (27.04 min)
+2025-12-17 16:47:18 - INFO - [bert_cased] Top 5 Configurations:
+2025-12-17 16:47:18 - INFO - [bert_cased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400} → Score: 0.7151 (±0.0067)
+2025-12-17 16:47:18 - INFO - [bert_cased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400} → Score: 0.7149 (±0.0066)
+2025-12-17 16:47:18 - INFO - [bert_cased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300} → Score: 0.7148 (±0.0066)
+2025-12-17 16:47:18 - INFO - [bert_cased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 300} → Score: 0.7144 (±0.0065)
+2025-12-17 16:47:18 - INFO - [bert_cased]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200} → Score: 0.7139 (±0.0065)
+2025-12-17 16:47:18 - INFO - --------------------------------------------------------------------------------
+2025-12-17 16:47:18 - INFO - [bert_cased] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 16:47:18 - INFO - --------------------------------------------------------------------------------
+2025-12-17 16:47:18 - INFO - [bert_cased] Test set дээр үнэлж байна...
+2025-12-17 16:47:18 - INFO - [bert_cased] Test Accuracy: 0.7167
+2025-12-17 16:47:18 - INFO - [bert_cased] Classification Report:
+2025-12-17 16:47:18 - INFO - [bert_cased]                 precision    recall  f1-score   support
+2025-12-17 16:47:18 - INFO - [bert_cased]       Negative       0.72      0.71      0.71      5000
+2025-12-17 16:47:18 - INFO - [bert_cased]       Positive       0.71      0.72      0.72      5000
+2025-12-17 16:47:18 - INFO - [bert_cased]       accuracy                           0.72     10000
+2025-12-17 16:47:18 - INFO - [bert_cased]      macro avg       0.72      0.72      0.72     10000
+2025-12-17 16:47:18 - INFO - [bert_cased]   weighted avg       0.72      0.72      0.72     10000
+2025-12-17 16:47:18 - INFO - [bert_cased] Confusion Matrix:
+2025-12-17 16:47:18 - INFO - [bert_cased]   TN= 3547 | FP= 1453
+2025-12-17 16:47:18 - INFO - [bert_cased]   FN= 1380 | TP= 3620
+2025-12-17 16:47:18 - INFO - [bert_cased] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 16:47:18 - DEBUG - [bert_cased] Дэлгэрэнгүй grid search үр дүн: logs/detailed_rf_bert_cased_20251217_162015.csv
+2025-12-17 16:47:18 - INFO - [bert_cased] Шилдэг модел: models/best_rf_bert_cased_20251217_162015.pkl
+2025-12-17 16:47:18 - INFO - [bert_cased] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 16:47:18 - INFO - ================================================================================
+
+2025-12-17 16:52:01 - INFO - 
+================================================================================
+2025-12-17 16:52:01 - INFO - НЭВТРЭХ: ROBERTA ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - RANDOM FOREST
+2025-12-17 16:52:01 - INFO - ================================================================================
+2025-12-17 16:52:01 - INFO - Огноо ба цаг: 2025-12-17 16:52:01
+2025-12-17 16:52:01 - INFO - Эмбеддингийн төрөл: roberta
+2025-12-17 16:52:01 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 16:52:01 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 16:52:01 - DEBUG - [roberta] Параметрүүдийн Grid:
+2025-12-17 16:52:01 - DEBUG - {
+  "n_estimators": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400"
+  ],
+  "max_depth": [
+    "10",
+    "20"
+  ],
+  "min_samples_split": [
+    "2",
+    "5"
+  ],
+  "min_samples_leaf": [
+    "1"
+  ],
+  "max_features": [
+    "sqrt"
+  ]
+}
+2025-12-17 16:52:01 - INFO - [roberta] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 16:52:01 - INFO - [roberta] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 16:52:01 - INFO - [roberta] Random Forest модел үүсгэж байна...
+2025-12-17 16:52:01 - INFO - [roberta] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 16:52:01 - INFO - [roberta] Сургалт эхлэв...
+2025-12-17 17:18:50 - INFO - --------------------------------------------------------------------------------
+2025-12-17 17:18:50 - INFO - [roberta] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 17:18:50 - INFO - --------------------------------------------------------------------------------
+2025-12-17 17:18:50 - INFO - [roberta] Best CV Score: 0.8232
+2025-12-17 17:18:50 - INFO - [roberta] Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400}
+2025-12-17 17:18:50 - INFO - [roberta] Training Time: 1609.10 sec (26.82 min)
+2025-12-17 17:18:50 - INFO - [roberta] Top 5 Configurations:
+2025-12-17 17:18:50 - INFO - [roberta]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400} → Score: 0.8232 (±0.0024)
+2025-12-17 17:18:50 - INFO - [roberta]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 300} → Score: 0.8223 (±0.0031)
+2025-12-17 17:18:50 - INFO - [roberta]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400} → Score: 0.8222 (±0.0026)
+2025-12-17 17:18:50 - INFO - [roberta]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300} → Score: 0.8216 (±0.0035)
+2025-12-17 17:18:50 - INFO - [roberta]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 200} → Score: 0.8206 (±0.0031)
+2025-12-17 17:18:50 - INFO - --------------------------------------------------------------------------------
+2025-12-17 17:18:50 - INFO - [roberta] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 17:18:50 - INFO - --------------------------------------------------------------------------------
+2025-12-17 17:18:50 - INFO - [roberta] Test set дээр үнэлж байна...
+2025-12-17 17:18:51 - INFO - [roberta] Test Accuracy: 0.8259
+2025-12-17 17:18:51 - INFO - [roberta] Classification Report:
+2025-12-17 17:18:51 - INFO - [roberta]                 precision    recall  f1-score   support
+2025-12-17 17:18:51 - INFO - [roberta]       Negative       0.84      0.81      0.82      5000
+2025-12-17 17:18:51 - INFO - [roberta]       Positive       0.81      0.85      0.83      5000
+2025-12-17 17:18:51 - INFO - [roberta]       accuracy                           0.83     10000
+2025-12-17 17:18:51 - INFO - [roberta]      macro avg       0.83      0.83      0.83     10000
+2025-12-17 17:18:51 - INFO - [roberta]   weighted avg       0.83      0.83      0.83     10000
+2025-12-17 17:18:51 - INFO - [roberta] Confusion Matrix:
+2025-12-17 17:18:51 - INFO - [roberta]   TN= 4030 | FP=  970
+2025-12-17 17:18:51 - INFO - [roberta]   FN=  771 | TP= 4229
+2025-12-17 17:18:51 - INFO - [roberta] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 17:18:51 - DEBUG - [roberta] Дэлгэрэнгүй grid search үр дүн: logs/detailed_rf_roberta_20251217_165201.csv
+2025-12-17 17:18:51 - INFO - [roberta] Шилдэг модел: models/best_rf_roberta_20251217_165201.pkl
+2025-12-17 17:18:51 - INFO - [roberta] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 17:18:51 - INFO - ================================================================================
+
+2025-12-17 17:23:42 - INFO - 
+================================================================================
+2025-12-17 17:23:42 - INFO - НЭВТРЭХ: ALBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - RANDOM FOREST
+2025-12-17 17:23:42 - INFO - ================================================================================
+2025-12-17 17:23:42 - INFO - Огноо ба цаг: 2025-12-17 17:23:42
+2025-12-17 17:23:42 - INFO - Эмбеддингийн төрөл: albert
+2025-12-17 17:23:42 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 17:23:42 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 17:23:42 - DEBUG - [albert] Параметрүүдийн Grid:
+2025-12-17 17:23:42 - DEBUG - {
+  "n_estimators": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400"
+  ],
+  "max_depth": [
+    "10",
+    "20"
+  ],
+  "min_samples_split": [
+    "2",
+    "5"
+  ],
+  "min_samples_leaf": [
+    "1"
+  ],
+  "max_features": [
+    "sqrt"
+  ]
+}
+2025-12-17 17:23:42 - INFO - [albert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 17:23:43 - INFO - [albert] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 17:23:43 - INFO - [albert] Random Forest модел үүсгэж байна...
+2025-12-17 17:23:43 - INFO - [albert] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 17:23:43 - INFO - [albert] Сургалт эхлэв...
+2025-12-17 17:50:31 - INFO - --------------------------------------------------------------------------------
+2025-12-17 17:50:31 - INFO - [albert] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 17:50:31 - INFO - --------------------------------------------------------------------------------
+2025-12-17 17:50:31 - INFO - [albert] Best CV Score: 0.7918
+2025-12-17 17:50:31 - INFO - [albert] Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400}
+2025-12-17 17:50:31 - INFO - [albert] Training Time: 1608.32 sec (26.81 min)
+2025-12-17 17:50:31 - INFO - [albert] Top 5 Configurations:
+2025-12-17 17:50:31 - INFO - [albert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400} → Score: 0.7918 (±0.0019)
+2025-12-17 17:50:31 - INFO - [albert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400} → Score: 0.7911 (±0.0012)
+2025-12-17 17:50:31 - INFO - [albert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 300} → Score: 0.7910 (±0.0011)
+2025-12-17 17:50:31 - INFO - [albert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300} → Score: 0.7909 (±0.0031)
+2025-12-17 17:50:31 - INFO - [albert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 200} → Score: 0.7891 (±0.0026)
+2025-12-17 17:50:31 - INFO - --------------------------------------------------------------------------------
+2025-12-17 17:50:31 - INFO - [albert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 17:50:31 - INFO - --------------------------------------------------------------------------------
+2025-12-17 17:50:31 - INFO - [albert] Test set дээр үнэлж байна...
+2025-12-17 17:50:31 - INFO - [albert] Test Accuracy: 0.7909
+2025-12-17 17:50:31 - INFO - [albert] Classification Report:
+2025-12-17 17:50:31 - INFO - [albert]                 precision    recall  f1-score   support
+2025-12-17 17:50:31 - INFO - [albert]       Negative       0.79      0.79      0.79      5000
+2025-12-17 17:50:31 - INFO - [albert]       Positive       0.79      0.79      0.79      5000
+2025-12-17 17:50:31 - INFO - [albert]       accuracy                           0.79     10000
+2025-12-17 17:50:31 - INFO - [albert]      macro avg       0.79      0.79      0.79     10000
+2025-12-17 17:50:31 - INFO - [albert]   weighted avg       0.79      0.79      0.79     10000
+2025-12-17 17:50:31 - INFO - [albert] Confusion Matrix:
+2025-12-17 17:50:31 - INFO - [albert]   TN= 3955 | FP= 1045
+2025-12-17 17:50:31 - INFO - [albert]   FN= 1046 | TP= 3954
+2025-12-17 17:50:31 - INFO - [albert] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 17:50:31 - DEBUG - [albert] Дэлгэрэнгүй grid search үр дүн: logs/detailed_rf_albert_20251217_172342.csv
+2025-12-17 17:50:31 - INFO - [albert] Шилдэг модел: models/best_rf_albert_20251217_172342.pkl
+2025-12-17 17:50:31 - INFO - [albert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 17:50:31 - INFO - ================================================================================
+
+2025-12-17 19:35:20 - INFO - 
+================================================================================
+2025-12-17 19:35:20 - INFO - НЭВТРЭХ: SBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - RANDOM FOREST
+2025-12-17 19:35:20 - INFO - ================================================================================
+2025-12-17 19:35:20 - INFO - Огноо ба цаг: 2025-12-17 19:35:20
+2025-12-17 19:35:20 - INFO - Эмбеддингийн төрөл: sbert
+2025-12-17 19:35:20 - INFO - Өгөгдлийн хэмжээ: (50000, 384)
+2025-12-17 19:35:20 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 19:35:20 - DEBUG - [sbert] Параметрүүдийн Grid:
+2025-12-17 19:35:20 - DEBUG - {
+  "n_estimators": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400"
+  ],
+  "max_depth": [
+    "10",
+    "20"
+  ],
+  "min_samples_split": [
+    "2",
+    "5"
+  ],
+  "min_samples_leaf": [
+    "1"
+  ],
+  "max_features": [
+    "sqrt"
+  ]
+}
+2025-12-17 19:35:20 - INFO - [sbert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 19:35:20 - INFO - [sbert] Train: (40000, 384) | Test: (10000, 384)
+2025-12-17 19:35:20 - INFO - [sbert] Random Forest модел үүсгэж байна...
+2025-12-17 19:35:20 - INFO - [sbert] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 19:35:20 - INFO - [sbert] Сургалт эхлэв...
+2025-12-17 19:54:15 - INFO - --------------------------------------------------------------------------------
+2025-12-17 19:54:15 - INFO - [sbert] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 19:54:15 - INFO - --------------------------------------------------------------------------------
+2025-12-17 19:54:15 - INFO - [sbert] Best CV Score: 0.7812
+2025-12-17 19:54:15 - INFO - [sbert] Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400}
+2025-12-17 19:54:15 - INFO - [sbert] Training Time: 1134.59 sec (18.91 min)
+2025-12-17 19:54:15 - INFO - [sbert] Top 5 Configurations:
+2025-12-17 19:54:15 - INFO - [sbert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400} → Score: 0.7812 (±0.0048)
+2025-12-17 19:54:15 - INFO - [sbert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400} → Score: 0.7797 (±0.0060)
+2025-12-17 19:54:15 - INFO - [sbert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300} → Score: 0.7797 (±0.0062)
+2025-12-17 19:54:15 - INFO - [sbert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 300} → Score: 0.7778 (±0.0052)
+2025-12-17 19:54:15 - INFO - [sbert]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200} → Score: 0.7773 (±0.0042)
+2025-12-17 19:54:15 - INFO - --------------------------------------------------------------------------------
+2025-12-17 19:54:15 - INFO - [sbert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 19:54:15 - INFO - --------------------------------------------------------------------------------
+2025-12-17 19:54:15 - INFO - [sbert] Test set дээр үнэлж байна...
+2025-12-17 19:54:15 - INFO - [sbert] Test Accuracy: 0.7821
+2025-12-17 19:54:15 - INFO - [sbert] Classification Report:
+2025-12-17 19:54:15 - INFO - [sbert]                 precision    recall  f1-score   support
+2025-12-17 19:54:15 - INFO - [sbert]       Negative       0.80      0.76      0.78      5000
+2025-12-17 19:54:15 - INFO - [sbert]       Positive       0.77      0.81      0.79      5000
+2025-12-17 19:54:15 - INFO - [sbert]       accuracy                           0.78     10000
+2025-12-17 19:54:15 - INFO - [sbert]      macro avg       0.78      0.78      0.78     10000
+2025-12-17 19:54:15 - INFO - [sbert]   weighted avg       0.78      0.78      0.78     10000
+2025-12-17 19:54:15 - INFO - [sbert] Confusion Matrix:
+2025-12-17 19:54:15 - INFO - [sbert]   TN= 3787 | FP= 1213
+2025-12-17 19:54:15 - INFO - [sbert]   FN=  966 | TP= 4034
+2025-12-17 19:54:15 - INFO - [sbert] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 19:54:15 - DEBUG - [sbert] Дэлгэрэнгүй grid search үр дүн: logs/detailed_rf_sbert_20251217_193520.csv
+2025-12-17 19:54:15 - INFO - [sbert] Шилдэг модел: models/best_rf_sbert_20251217_193520.pkl
+2025-12-17 19:54:15 - INFO - [sbert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 19:54:15 - INFO - ================================================================================
+
+2025-12-17 20:07:38 - INFO - 
+================================================================================
+2025-12-17 20:07:38 - INFO - НЭВТРЭХ: WORD2VEC ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - RANDOM FOREST
+2025-12-17 20:07:38 - INFO - ================================================================================
+2025-12-17 20:07:38 - INFO - Огноо ба цаг: 2025-12-17 20:07:38
+2025-12-17 20:07:38 - INFO - Эмбеддингийн төрөл: word2vec
+2025-12-17 20:07:38 - INFO - Өгөгдлийн хэмжээ: (50000, 100)
+2025-12-17 20:07:38 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 20:07:38 - DEBUG - [word2vec] Параметрүүдийн Grid:
+2025-12-17 20:07:38 - DEBUG - {
+  "n_estimators": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400"
+  ],
+  "max_depth": [
+    "10",
+    "20"
+  ],
+  "min_samples_split": [
+    "2",
+    "5"
+  ],
+  "min_samples_leaf": [
+    "1"
+  ],
+  "max_features": [
+    "sqrt"
+  ]
+}
+2025-12-17 20:07:38 - INFO - [word2vec] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 20:07:38 - INFO - [word2vec] Train: (40000, 100) | Test: (10000, 100)
+2025-12-17 20:07:38 - INFO - [word2vec] Random Forest модел үүсгэж байна...
+2025-12-17 20:07:38 - INFO - [word2vec] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 20:07:38 - INFO - [word2vec] Сургалт эхлэв...
+2025-12-17 20:17:17 - INFO - --------------------------------------------------------------------------------
+2025-12-17 20:17:17 - INFO - [word2vec] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 20:17:17 - INFO - --------------------------------------------------------------------------------
+2025-12-17 20:17:17 - INFO - [word2vec] Best CV Score: 0.7960
+2025-12-17 20:17:17 - INFO - [word2vec] Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400}
+2025-12-17 20:17:17 - INFO - [word2vec] Training Time: 579.05 sec (9.65 min)
+2025-12-17 20:17:17 - INFO - [word2vec] Top 5 Configurations:
+2025-12-17 20:17:17 - INFO - [word2vec]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 400} → Score: 0.7960 (±0.0043)
+2025-12-17 20:17:17 - INFO - [word2vec]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 300} → Score: 0.7958 (±0.0031)
+2025-12-17 20:17:17 - INFO - [word2vec]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300} → Score: 0.7950 (±0.0036)
+2025-12-17 20:17:17 - INFO - [word2vec]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400} → Score: 0.7950 (±0.0038)
+2025-12-17 20:17:17 - INFO - [word2vec]   {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200} → Score: 0.7943 (±0.0040)
+2025-12-17 20:17:17 - INFO - --------------------------------------------------------------------------------
+2025-12-17 20:17:17 - INFO - [word2vec] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 20:17:17 - INFO - --------------------------------------------------------------------------------
+2025-12-17 20:17:17 - INFO - [word2vec] Test set дээр үнэлж байна...
+2025-12-17 20:17:17 - INFO - [word2vec] Test Accuracy: 0.7984
+2025-12-17 20:17:17 - INFO - [word2vec] Classification Report:
+2025-12-17 20:17:17 - INFO - [word2vec]                 precision    recall  f1-score   support
+2025-12-17 20:17:17 - INFO - [word2vec]       Negative       0.80      0.79      0.80      5000
+2025-12-17 20:17:17 - INFO - [word2vec]       Positive       0.79      0.81      0.80      5000
+2025-12-17 20:17:17 - INFO - [word2vec]       accuracy                           0.80     10000
+2025-12-17 20:17:17 - INFO - [word2vec]      macro avg       0.80      0.80      0.80     10000
+2025-12-17 20:17:17 - INFO - [word2vec]   weighted avg       0.80      0.80      0.80     10000
+2025-12-17 20:17:17 - INFO - [word2vec] Confusion Matrix:
+2025-12-17 20:17:17 - INFO - [word2vec]   TN= 3954 | FP= 1046
+2025-12-17 20:17:17 - INFO - [word2vec]   FN=  970 | TP= 4030
+2025-12-17 20:17:17 - INFO - [word2vec] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 20:17:17 - DEBUG - [word2vec] Дэлгэрэнгүй grid search үр дүн: logs/detailed_rf_word2vec_20251217_200738.csv
+2025-12-17 20:17:17 - INFO - [word2vec] Шилдэг модел: models/best_rf_word2vec_20251217_200738.pkl
+2025-12-17 20:17:17 - INFO - [word2vec] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 20:17:17 - INFO - ================================================================================
+

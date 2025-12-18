@@ -1,0 +1,202 @@
+2025-12-17 11:16:16 - INFO - 
+================================================================================
+2025-12-17 11:16:16 - INFO - НЭВТРЭХ: BERT_CASED ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ
+2025-12-17 11:16:16 - INFO - ================================================================================
+2025-12-17 11:16:16 - INFO - Огноо ба цаг: 2025-12-17 11:16:16
+2025-12-17 11:16:16 - INFO - Эмбеддингийн төрөл: bert_cased
+2025-12-17 11:16:16 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 11:16:16 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 11:16:16 - DEBUG - [bert_cased] Параметрүүдийн Grid:
+2025-12-17 11:16:16 - DEBUG - {
+  "C": [
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "penalty": [
+    "l2"
+  ],
+  "solver": [
+    "liblinear",
+    "saga"
+  ],
+  "max_iter": [
+    500,
+    1000
+  ]
+}
+2025-12-17 11:16:16 - INFO - [bert_cased] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 11:16:16 - INFO - [bert_cased] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 11:16:16 - INFO - [bert_cased] Logistic Regression модел үүсгэж байна...
+2025-12-17 11:16:16 - INFO - [bert_cased] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 11:16:16 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-17 11:28:03 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:28:03 - INFO - [bert_cased] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 11:28:03 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:28:03 - INFO - [bert_cased] Best CV Score: 0.7796
+2025-12-17 11:28:03 - INFO - [bert_cased] Best Parameters: {'C': 1, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga'}
+2025-12-17 11:28:03 - INFO - [bert_cased] Training Time: 707.09 sec (11.78 min)
+2025-12-17 11:28:03 - INFO - [bert_cased] Top 5 Configurations:
+2025-12-17 11:28:03 - INFO - [bert_cased]   {'C': 1, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga'} → Score: 0.7796 (±0.0051)
+2025-12-17 11:28:03 - INFO - [bert_cased]   {'C': 1, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga'} → Score: 0.7796 (±0.0051)
+2025-12-17 11:28:03 - INFO - [bert_cased]   {'C': 1, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear'} → Score: 0.7795 (±0.0050)
+2025-12-17 11:28:03 - INFO - [bert_cased]   {'C': 1, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'liblinear'} → Score: 0.7795 (±0.0050)
+2025-12-17 11:28:03 - INFO - [bert_cased]   {'C': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga'} → Score: 0.7786 (±0.0052)
+2025-12-17 11:28:03 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:28:03 - INFO - [bert_cased] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 11:28:03 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:28:03 - INFO - [bert_cased] Test set дээр үнэлж байна...
+2025-12-17 11:28:03 - INFO - [bert_cased] Test Accuracy: 0.7836
+2025-12-17 11:28:03 - INFO - [bert_cased] Classification Report:
+2025-12-17 11:28:03 - INFO - [bert_cased]                 precision    recall  f1-score   support
+2025-12-17 11:28:03 - INFO - [bert_cased]       Negative       0.78      0.79      0.78      5000
+2025-12-17 11:28:03 - INFO - [bert_cased]       Positive       0.79      0.78      0.78      5000
+2025-12-17 11:28:03 - INFO - [bert_cased]       accuracy                           0.78     10000
+2025-12-17 11:28:03 - INFO - [bert_cased]      macro avg       0.78      0.78      0.78     10000
+2025-12-17 11:28:03 - INFO - [bert_cased]   weighted avg       0.78      0.78      0.78     10000
+2025-12-17 11:28:03 - INFO - [bert_cased] Confusion Matrix:
+2025-12-17 11:28:03 - INFO - [bert_cased]   TN= 3949 | FP= 1051
+2025-12-17 11:28:03 - INFO - [bert_cased]   FN= 1113 | TP= 3887
+2025-12-17 11:28:03 - DEBUG - [bert_cased] Confusion Matrix зураг үүсгэж байна...
+2025-12-17 11:28:04 - INFO - [bert_cased] Confusion Matrix зураг: logs/confusion_matrix_bert_cased_20251217_111616.png
+2025-12-17 11:28:04 - INFO - [bert_cased] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 11:28:04 - DEBUG - [bert_cased] Дэлгэрэнгүй grid search үр дүн: logs/detailed_bert_cased_20251217_111616.csv
+2025-12-17 11:28:04 - INFO - [bert_cased] Шилдэг модел: logs/best_model_bert_cased_20251217_111616.pkl
+2025-12-17 11:28:04 - INFO - [bert_cased] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 11:28:04 - INFO - ================================================================================
+
+2025-12-17 11:29:20 - INFO - 
+================================================================================
+2025-12-17 11:29:20 - INFO - НЭВТРЭХ: ROBERTA ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ
+2025-12-17 11:29:20 - INFO - ================================================================================
+2025-12-17 11:29:20 - INFO - Огноо ба цаг: 2025-12-17 11:29:20
+2025-12-17 11:29:20 - INFO - Эмбеддингийн төрөл: roberta
+2025-12-17 11:29:20 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 11:29:20 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 11:29:20 - DEBUG - [roberta] Параметрүүдийн Grid:
+2025-12-17 11:29:20 - DEBUG - {
+  "C": [
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "penalty": [
+    "l2"
+  ],
+  "solver": [
+    "liblinear",
+    "saga"
+  ],
+  "max_iter": [
+    500,
+    1000
+  ]
+}
+2025-12-17 11:29:20 - INFO - [roberta] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 11:29:20 - INFO - [roberta] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 11:29:20 - INFO - [roberta] Logistic Regression модел үүсгэж байна...
+2025-12-17 11:29:20 - INFO - [roberta] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 11:29:20 - INFO - [roberta] Сургалт эхлэв...
+2025-12-17 11:37:42 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:37:42 - INFO - [roberta] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 11:37:42 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:37:42 - INFO - [roberta] Best CV Score: 0.8633
+2025-12-17 11:37:42 - INFO - [roberta] Best Parameters: {'C': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear'}
+2025-12-17 11:37:42 - INFO - [roberta] Training Time: 501.25 sec (8.35 min)
+2025-12-17 11:37:42 - INFO - [roberta] Top 5 Configurations:
+2025-12-17 11:37:42 - INFO - [roberta]   {'C': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear'} → Score: 0.8633 (±0.0042)
+2025-12-17 11:37:42 - INFO - [roberta]   {'C': 10, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'liblinear'} → Score: 0.8633 (±0.0042)
+2025-12-17 11:37:42 - INFO - [roberta]   {'C': 10, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga'} → Score: 0.8633 (±0.0041)
+2025-12-17 11:37:42 - INFO - [roberta]   {'C': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga'} → Score: 0.8615 (±0.0042)
+2025-12-17 11:37:42 - INFO - [roberta]   {'C': 1, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear'} → Score: 0.8586 (±0.0052)
+2025-12-17 11:37:42 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:37:42 - INFO - [roberta] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 11:37:42 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:37:42 - INFO - [roberta] Test set дээр үнэлж байна...
+2025-12-17 11:37:42 - INFO - [roberta] Test Accuracy: 0.8661
+2025-12-17 11:37:42 - INFO - [roberta] Classification Report:
+2025-12-17 11:37:42 - INFO - [roberta]                 precision    recall  f1-score   support
+2025-12-17 11:37:42 - INFO - [roberta]       Negative       0.87      0.86      0.87      5000
+2025-12-17 11:37:42 - INFO - [roberta]       Positive       0.86      0.87      0.87      5000
+2025-12-17 11:37:42 - INFO - [roberta]       accuracy                           0.87     10000
+2025-12-17 11:37:42 - INFO - [roberta]      macro avg       0.87      0.87      0.87     10000
+2025-12-17 11:37:42 - INFO - [roberta]   weighted avg       0.87      0.87      0.87     10000
+2025-12-17 11:37:42 - INFO - [roberta] Confusion Matrix:
+2025-12-17 11:37:42 - INFO - [roberta]   TN= 4315 | FP=  685
+2025-12-17 11:37:42 - INFO - [roberta]   FN=  654 | TP= 4346
+2025-12-17 11:37:42 - DEBUG - [roberta] Confusion Matrix зураг үүсгэж байна...
+2025-12-17 11:37:42 - INFO - [roberta] Confusion Matrix зураг: logs/confusion_matrix_roberta_20251217_112920.png
+2025-12-17 11:37:42 - INFO - [roberta] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 11:37:42 - DEBUG - [roberta] Дэлгэрэнгүй grid search үр дүн: logs/detailed_roberta_20251217_112920.csv
+2025-12-17 11:37:42 - INFO - [roberta] Шилдэг модел: logs/best_model_roberta_20251217_112920.pkl
+2025-12-17 11:37:42 - INFO - [roberta] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 11:37:42 - INFO - ================================================================================
+
+2025-12-17 11:46:50 - INFO - 
+================================================================================
+2025-12-17 11:46:50 - INFO - НЭВТРЭХ: ALBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ
+2025-12-17 11:46:50 - INFO - ================================================================================
+2025-12-17 11:46:50 - INFO - Огноо ба цаг: 2025-12-17 11:46:50
+2025-12-17 11:46:50 - INFO - Эмбеддингийн төрөл: albert
+2025-12-17 11:46:50 - INFO - Өгөгдлийн хэмжээ: (50000, 768)
+2025-12-17 11:46:50 - INFO - Лэйбэлийн тоо: 50000
+2025-12-17 11:46:50 - DEBUG - [albert] Параметрүүдийн Grid:
+2025-12-17 11:46:50 - DEBUG - {
+  "C": [
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "penalty": [
+    "l2"
+  ],
+  "solver": [
+    "liblinear",
+    "saga"
+  ],
+  "max_iter": [
+    500,
+    1000
+  ]
+}
+2025-12-17 11:46:50 - INFO - [albert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-17 11:46:50 - INFO - [albert] Train: (40000, 768) | Test: (10000, 768)
+2025-12-17 11:46:50 - INFO - [albert] Logistic Regression модел үүсгэж байна...
+2025-12-17 11:46:50 - INFO - [albert] Grid Search with 5-Fold CV эхлүүлж байна...
+2025-12-17 11:46:50 - INFO - [albert] Сургалт эхлэв...
+2025-12-17 11:56:46 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:56:46 - INFO - [albert] ҮР ДҮН - CROSS-VALIDATION
+2025-12-17 11:56:46 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:56:46 - INFO - [albert] Best CV Score: 0.8387
+2025-12-17 11:56:46 - INFO - [albert] Best Parameters: {'C': 0.1, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear'}
+2025-12-17 11:56:46 - INFO - [albert] Training Time: 595.98 sec (9.93 min)
+2025-12-17 11:56:46 - INFO - [albert] Top 5 Configurations:
+2025-12-17 11:56:46 - INFO - [albert]   {'C': 0.1, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear'} → Score: 0.8387 (±0.0044)
+2025-12-17 11:56:46 - INFO - [albert]   {'C': 0.1, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'liblinear'} → Score: 0.8387 (±0.0044)
+2025-12-17 11:56:46 - INFO - [albert]   {'C': 0.1, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga'} → Score: 0.8386 (±0.0045)
+2025-12-17 11:56:46 - INFO - [albert]   {'C': 0.1, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga'} → Score: 0.8386 (±0.0046)
+2025-12-17 11:56:46 - INFO - [albert]   {'C': 1, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga'} → Score: 0.8386 (±0.0042)
+2025-12-17 11:56:46 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:56:46 - INFO - [albert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-17 11:56:46 - INFO - --------------------------------------------------------------------------------
+2025-12-17 11:56:46 - INFO - [albert] Test set дээр үнэлж байна...
+2025-12-17 11:56:46 - INFO - [albert] Test Accuracy: 0.8400
+2025-12-17 11:56:46 - INFO - [albert] Classification Report:
+2025-12-17 11:56:46 - INFO - [albert]                 precision    recall  f1-score   support
+2025-12-17 11:56:46 - INFO - [albert]       Negative       0.84      0.84      0.84      5000
+2025-12-17 11:56:46 - INFO - [albert]       Positive       0.84      0.84      0.84      5000
+2025-12-17 11:56:46 - INFO - [albert]       accuracy                           0.84     10000
+2025-12-17 11:56:46 - INFO - [albert]      macro avg       0.84      0.84      0.84     10000
+2025-12-17 11:56:46 - INFO - [albert]   weighted avg       0.84      0.84      0.84     10000
+2025-12-17 11:56:46 - INFO - [albert] Confusion Matrix:
+2025-12-17 11:56:46 - INFO - [albert]   TN= 4202 | FP=  798
+2025-12-17 11:56:46 - INFO - [albert]   FN=  802 | TP= 4198
+2025-12-17 11:56:46 - INFO - [albert] Нэгдсэн үр дүн хадгалагдсан: logs/all_experiments_results.csv
+2025-12-17 11:56:46 - DEBUG - [albert] Дэлгэрэнгүй grid search үр дүн: logs/detailed_albert_20251217_114650.csv
+2025-12-17 11:56:46 - INFO - [albert] Шилдэг модел: models/best_model_albert_20251217_114650.pkl
+2025-12-17 11:56:46 - INFO - [albert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-17 11:56:46 - INFO - ================================================================================
+
