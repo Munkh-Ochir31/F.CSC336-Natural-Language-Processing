@@ -15,9 +15,6 @@ models/*
 # ======================
 # Notebooks
 # ======================
-notebooks/**/*
-!notebooks/**/*.ipynb
-!notebooks/.gitkeep
 
 # ======================
 # ML artifacts
