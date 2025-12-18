@@ -1,0 +1,62 @@
+{
+  "paths": {
+    "embedding_base_path": "C:\\Users\\my tech\\Documents\\1. 3A\\NLP\\data\\embedding\\embedded_x",
+    "log_dir": "logs",
+    "models_dir": "models"
+  },
+  
+  "embeddings": {
+    "bert_uncased": "imdb_bert_base_uncased_embed.pt",
+    "bert_cased": "imdb_bert_base_cased_embed.pt",
+    "roberta": "imdb_roberta_embed.pt",
+    "albert": "imdb_albert_embed.pt",
+    "sbert": "imdb_sbert_embed.pt",
+    "hatebert": "imdb_hatebert_embed.pt"
+  },
+  
+  "training": {
+    "max_samples": 10000,
+    "test_size": 0.2,
+    "val_size": 0.2,
+    "epochs": 20,
+    "batch_size": 32,
+    "random_state": 42
+  },
+  
+  "hyperparameters": [
+    {"lstm_units": 64, "dropout": 0.2, "bidirectional": false, "lr": 0.001},
+    {"lstm_units": 64, "dropout": 0.3, "bidirectional": false, "lr": 0.001},
+    {"lstm_units": 64, "dropout": 0.4, "bidirectional": false, "lr": 0.0005},
+    {"lstm_units": 128, "dropout": 0.2, "bidirectional": false, "lr": 0.001},
+    {"lstm_units": 128, "dropout": 0.3, "bidirectional": false, "lr": 0.001},
+    {"lstm_units": 128, "dropout": 0.4, "bidirectional": false, "lr": 0.0005},
+    {"lstm_units": 128, "dropout": 0.5, "bidirectional": false, "lr": 0.001},
+    {"lstm_units": 256, "dropout": 0.2, "bidirectional": false, "lr": 0.001},
+    {"lstm_units": 256, "dropout": 0.3, "bidirectional": false, "lr": 0.001},
+    {"lstm_units": 256, "dropout": 0.4, "bidirectional": false, "lr": 0.0005},
+    {"lstm_units": 64, "dropout": 0.2, "bidirectional": true, "lr": 0.001},
+    {"lstm_units": 64, "dropout": 0.3, "bidirectional": true, "lr": 0.001},
+    {"lstm_units": 64, "dropout": 0.4, "bidirectional": true, "lr": 0.0005},
+    {"lstm_units": 128, "dropout": 0.2, "bidirectional": true, "lr": 0.001},
+    {"lstm_units": 128, "dropout": 0.3, "bidirectional": true, "lr": 0.001},
+    {"lstm_units": 128, "dropout": 0.4, "bidirectional": true, "lr": 0.0005},
+    {"lstm_units": 256, "dropout": 0.2, "bidirectional": true, "lr": 0.001},
+    {"lstm_units": 256, "dropout": 0.3, "bidirectional": true, "lr": 0.001},
+    {"lstm_units": 256, "dropout": 0.4, "bidirectional": true, "lr": 0.0005},
+    {"lstm_units": 256, "dropout": 0.5, "bidirectional": true, "lr": 0.001}
+  ],
+  
+  "callbacks": {
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 5,
+      "restore_best_weights": true
+    },
+    "reduce_lr": {
+      "monitor": "val_loss",
+      "factor": 0.5,
+      "patience": 3,
+      "min_lr": 1e-6
+    }
+  }
+}

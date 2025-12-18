@@ -1,0 +1,984 @@
+2025-12-19 04:11:52 - INFO - 
+================================================================================
+2025-12-19 04:11:52 - INFO - НЭВТРЭХ: BERT_UNCASED ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - PyTorch LSTM
+2025-12-19 04:11:52 - INFO - ================================================================================
+2025-12-19 04:11:52 - INFO - Огноо ба цаг: 2025-12-19 04:11:52
+2025-12-19 04:11:52 - INFO - Эмбеддингийн төрөл: bert_uncased
+2025-12-19 04:11:52 - INFO - Өгөгдлийн хэмжээ: (10000, 768)
+2025-12-19 04:11:52 - INFO - Лэйбэлийн тоо: 10000
+2025-12-19 04:11:52 - INFO - Төхөөрөмж: cuda
+2025-12-19 04:11:52 - INFO - GPU: NVIDIA GeForce RTX 5060
+2025-12-19 04:11:52 - INFO - [bert_uncased] 20 конфигурац туршиж байна...
+2025-12-19 04:11:52 - INFO - [bert_uncased] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 04:11:52 - INFO - [bert_uncased] Train: (6400, 768) | Val: (1600, 768) | Test: (2000, 768)
+2025-12-19 04:11:52 - INFO - [bert_uncased] Өгөгдлийг CPU дээр үлдээж, batch-аар GPU-руу илгээнэ (Memory efficient)
+2025-12-19 04:11:52 - INFO - [bert_uncased] GPU санах ойг цэвэрлэлээ
+2025-12-19 04:11:52 - INFO - 
+[bert_uncased] Конфигурац 1/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:11:58 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:06 - DEBUG - [bert_uncased] Early stopping at epoch 15
+2025-12-19 04:12:06 - INFO - [bert_uncased] Config 1 - Val Accuracy: 0.7744 | Time: 13.81s
+2025-12-19 04:12:06 - DEBUG - [bert_uncased] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:12:06 - INFO - 
+[bert_uncased] Конфигурац 2/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:12:06 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:14 - DEBUG - [bert_uncased] Early stopping at epoch 16
+2025-12-19 04:12:14 - INFO - [bert_uncased] Config 2 - Val Accuracy: 0.7744 | Time: 7.39s
+2025-12-19 04:12:14 - DEBUG - [bert_uncased] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:12:14 - INFO - 
+[bert_uncased] Конфигурац 3/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:12:14 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:18 - DEBUG - [bert_uncased] Early stopping at epoch 10
+2025-12-19 04:12:18 - INFO - [bert_uncased] Config 3 - Val Accuracy: 0.7750 | Time: 4.59s
+2025-12-19 04:12:18 - DEBUG - [bert_uncased] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:12:18 - INFO - 
+[bert_uncased] Конфигурац 4/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:12:18 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:23 - DEBUG - [bert_uncased] Early stopping at epoch 10
+2025-12-19 04:12:23 - INFO - [bert_uncased] Config 4 - Val Accuracy: 0.7681 | Time: 4.63s
+2025-12-19 04:12:23 - DEBUG - [bert_uncased] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:12:23 - INFO - 
+[bert_uncased] Конфигурац 5/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:12:23 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:29 - DEBUG - [bert_uncased] Early stopping at epoch 13
+2025-12-19 04:12:29 - INFO - [bert_uncased] Config 5 - Val Accuracy: 0.7775 | Time: 6.00s
+2025-12-19 04:12:29 - DEBUG - [bert_uncased] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:12:29 - INFO - 
+[bert_uncased] Конфигурац 6/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:12:29 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:36 - DEBUG - [bert_uncased] Early stopping at epoch 14
+2025-12-19 04:12:36 - INFO - [bert_uncased] Config 6 - Val Accuracy: 0.7756 | Time: 6.74s
+2025-12-19 04:12:36 - DEBUG - [bert_uncased] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:12:36 - INFO - 
+[bert_uncased] Конфигурац 7/20: {'lstm_units': 128, 'dropout': 0.5, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:12:36 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:42 - DEBUG - [bert_uncased] Early stopping at epoch 13
+2025-12-19 04:12:42 - INFO - [bert_uncased] Config 7 - Val Accuracy: 0.7562 | Time: 6.26s
+2025-12-19 04:12:42 - DEBUG - [bert_uncased] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:12:42 - INFO - 
+[bert_uncased] Конфигурац 8/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:12:42 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:46 - DEBUG - [bert_uncased] Early stopping at epoch 8
+2025-12-19 04:12:46 - INFO - [bert_uncased] Config 8 - Val Accuracy: 0.7594 | Time: 4.27s
+2025-12-19 04:12:46 - DEBUG - [bert_uncased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:12:46 - INFO - 
+[bert_uncased] Конфигурац 9/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:12:46 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:53 - DEBUG - [bert_uncased] Early stopping at epoch 12
+2025-12-19 04:12:53 - INFO - [bert_uncased] Config 9 - Val Accuracy: 0.7819 | Time: 6.32s
+2025-12-19 04:12:53 - DEBUG - [bert_uncased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:12:53 - INFO - 
+[bert_uncased] Конфигурац 10/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:12:53 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:12:58 - DEBUG - [bert_uncased] Early stopping at epoch 12
+2025-12-19 04:12:58 - INFO - [bert_uncased] Config 10 - Val Accuracy: 0.7681 | Time: 5.61s
+2025-12-19 04:12:58 - DEBUG - [bert_uncased] GPU Memory: 0.05GB allocated, 0.06GB reserved
+2025-12-19 04:12:58 - INFO - 
+[bert_uncased] Конфигурац 11/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:12:58 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:04 - DEBUG - [bert_uncased] Early stopping at epoch 10
+2025-12-19 04:13:04 - INFO - [bert_uncased] Config 11 - Val Accuracy: 0.7769 | Time: 5.78s
+2025-12-19 04:13:04 - DEBUG - [bert_uncased] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:13:04 - INFO - 
+[bert_uncased] Конфигурац 12/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:13:04 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:10 - DEBUG - [bert_uncased] Early stopping at epoch 11
+2025-12-19 04:13:10 - INFO - [bert_uncased] Config 12 - Val Accuracy: 0.7669 | Time: 6.32s
+2025-12-19 04:13:10 - DEBUG - [bert_uncased] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:13:10 - INFO - 
+[bert_uncased] Конфигурац 13/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:13:11 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:16 - DEBUG - [bert_uncased] Early stopping at epoch 10
+2025-12-19 04:13:16 - INFO - [bert_uncased] Config 13 - Val Accuracy: 0.7725 | Time: 5.84s
+2025-12-19 04:13:16 - DEBUG - [bert_uncased] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:13:16 - INFO - 
+[bert_uncased] Конфигурац 14/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:13:16 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:22 - DEBUG - [bert_uncased] Early stopping at epoch 11
+2025-12-19 04:13:22 - INFO - [bert_uncased] Config 14 - Val Accuracy: 0.7612 | Time: 5.84s
+2025-12-19 04:13:22 - DEBUG - [bert_uncased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:13:22 - INFO - 
+[bert_uncased] Конфигурац 15/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:13:22 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:28 - DEBUG - [bert_uncased] Early stopping at epoch 10
+2025-12-19 04:13:28 - INFO - [bert_uncased] Config 15 - Val Accuracy: 0.7681 | Time: 5.34s
+2025-12-19 04:13:28 - DEBUG - [bert_uncased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:13:28 - INFO - 
+[bert_uncased] Конфигурац 16/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:13:28 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:36 - DEBUG - [bert_uncased] Early stopping at epoch 15
+2025-12-19 04:13:36 - INFO - [bert_uncased] Config 16 - Val Accuracy: 0.7762 | Time: 7.93s
+2025-12-19 04:13:36 - DEBUG - [bert_uncased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:13:36 - INFO - 
+[bert_uncased] Конфигурац 17/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:13:36 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:42 - DEBUG - [bert_uncased] Early stopping at epoch 10
+2025-12-19 04:13:42 - INFO - [bert_uncased] Config 17 - Val Accuracy: 0.7725 | Time: 6.30s
+2025-12-19 04:13:42 - DEBUG - [bert_uncased] GPU Memory: 0.06GB allocated, 0.08GB reserved
+2025-12-19 04:13:42 - INFO - 
+[bert_uncased] Конфигурац 18/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:13:42 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:47 - DEBUG - [bert_uncased] Early stopping at epoch 9
+2025-12-19 04:13:48 - INFO - [bert_uncased] Config 18 - Val Accuracy: 0.7738 | Time: 5.56s
+2025-12-19 04:13:48 - DEBUG - [bert_uncased] GPU Memory: 0.06GB allocated, 0.08GB reserved
+2025-12-19 04:13:48 - INFO - 
+[bert_uncased] Конфигурац 19/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:13:48 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:13:54 - DEBUG - [bert_uncased] Early stopping at epoch 11
+2025-12-19 04:13:54 - INFO - [bert_uncased] Config 19 - Val Accuracy: 0.7738 | Time: 6.76s
+2025-12-19 04:13:54 - DEBUG - [bert_uncased] GPU Memory: 0.06GB allocated, 0.08GB reserved
+2025-12-19 04:13:54 - INFO - 
+[bert_uncased] Конфигурац 20/20: {'lstm_units': 256, 'dropout': 0.5, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:13:54 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 04:14:03 - DEBUG - [bert_uncased] Early stopping at epoch 14
+2025-12-19 04:14:03 - INFO - [bert_uncased] Config 20 - Val Accuracy: 0.7556 | Time: 8.60s
+2025-12-19 04:14:03 - DEBUG - [bert_uncased] GPU Memory: 0.06GB allocated, 0.08GB reserved
+2025-12-19 04:14:03 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:14:03 - INFO - [bert_uncased] ҮР ДҮН - VALIDATION
+2025-12-19 04:14:03 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:14:03 - INFO - [bert_uncased] Best Val Accuracy: 0.7819
+2025-12-19 04:14:03 - INFO - [bert_uncased] Best Config: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:14:03 - INFO - [bert_uncased] Top Configurations:
+2025-12-19 04:14:03 - INFO - [bert_uncased]   1. {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001} → Val Acc: 0.7819
+2025-12-19 04:14:03 - INFO - [bert_uncased]   2. {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001} → Val Acc: 0.7775
+2025-12-19 04:14:03 - INFO - [bert_uncased]   3. {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001} → Val Acc: 0.7769
+2025-12-19 04:14:03 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:14:03 - INFO - [bert_uncased] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 04:14:03 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:14:03 - INFO - [bert_uncased] Test set дээр үнэлж байна...
+2025-12-19 04:14:03 - INFO - [bert_uncased] Test Accuracy: 0.7910
+2025-12-19 04:14:03 - INFO - [bert_uncased] Classification Report:
+2025-12-19 04:14:03 - INFO - [bert_uncased]                 precision    recall  f1-score   support
+2025-12-19 04:14:03 - INFO - [bert_uncased]       Negative       0.76      0.85      0.80       994
+2025-12-19 04:14:03 - INFO - [bert_uncased]       Positive       0.83      0.73      0.78      1006
+2025-12-19 04:14:03 - INFO - [bert_uncased]       accuracy                           0.79      2000
+2025-12-19 04:14:03 - INFO - [bert_uncased]      macro avg       0.80      0.79      0.79      2000
+2025-12-19 04:14:03 - INFO - [bert_uncased]   weighted avg       0.80      0.79      0.79      2000
+2025-12-19 04:14:03 - INFO - [bert_uncased] Confusion Matrix:
+2025-12-19 04:14:03 - INFO - [bert_uncased]   TN=  848 | FP=  146
+2025-12-19 04:14:03 - INFO - [bert_uncased]   FN=  272 | TP=  734
+2025-12-19 04:14:03 - INFO - [bert_uncased] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 04:14:03 - DEBUG - [bert_uncased] Дэлгэрэнгүй үр дүн: logs\detailed_lstm_pytorch_bert_uncased_20251219_041152.csv
+2025-12-19 04:14:03 - INFO - [bert_uncased] Шилдэг модел: models\best_lstm_pytorch_bert_uncased_20251219_041152.pt
+2025-12-19 04:14:03 - INFO - [bert_uncased] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 04:14:03 - INFO - ================================================================================
+
+2025-12-19 04:16:55 - INFO - 
+================================================================================
+2025-12-19 04:16:55 - INFO - НЭВТРЭХ: BERT_CASED ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - PyTorch LSTM
+2025-12-19 04:16:55 - INFO - ================================================================================
+2025-12-19 04:16:55 - INFO - Огноо ба цаг: 2025-12-19 04:16:55
+2025-12-19 04:16:55 - INFO - Эмбеддингийн төрөл: bert_cased
+2025-12-19 04:16:55 - INFO - Өгөгдлийн хэмжээ: (10000, 768)
+2025-12-19 04:16:55 - INFO - Лэйбэлийн тоо: 10000
+2025-12-19 04:16:55 - INFO - Төхөөрөмж: cuda
+2025-12-19 04:16:55 - INFO - GPU: NVIDIA GeForce RTX 5060
+2025-12-19 04:16:55 - INFO - [bert_cased] 20 конфигурац туршиж байна...
+2025-12-19 04:16:55 - INFO - [bert_cased] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 04:16:55 - INFO - [bert_cased] Train: (6400, 768) | Val: (1600, 768) | Test: (2000, 768)
+2025-12-19 04:16:55 - INFO - [bert_cased] Өгөгдлийг CPU дээр үлдээж, batch-аар GPU-руу илгээнэ (Memory efficient)
+2025-12-19 04:16:55 - INFO - [bert_cased] GPU санах ойг цэвэрлэлээ
+2025-12-19 04:16:55 - INFO - 
+[bert_cased] Конфигурац 1/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:16:58 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:17:04 - DEBUG - [bert_cased] Early stopping at epoch 10
+2025-12-19 04:17:04 - INFO - [bert_cased] Config 1 - Val Accuracy: 0.7531 | Time: 8.87s
+2025-12-19 04:17:04 - DEBUG - [bert_cased] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:17:04 - INFO - 
+[bert_cased] Конфигурац 2/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:17:04 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:17:14 - DEBUG - [bert_cased] Early stopping at epoch 16
+2025-12-19 04:17:14 - INFO - [bert_cased] Config 2 - Val Accuracy: 0.7694 | Time: 9.31s
+2025-12-19 04:17:14 - DEBUG - [bert_cased] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:17:14 - INFO - 
+[bert_cased] Конфигурац 3/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:17:14 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:17:23 - DEBUG - [bert_cased] Early stopping at epoch 18
+2025-12-19 04:17:23 - INFO - [bert_cased] Config 3 - Val Accuracy: 0.7688 | Time: 9.64s
+2025-12-19 04:17:23 - DEBUG - [bert_cased] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:17:23 - INFO - 
+[bert_cased] Конфигурац 4/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:17:23 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:17:29 - DEBUG - [bert_cased] Early stopping at epoch 11
+2025-12-19 04:17:29 - INFO - [bert_cased] Config 4 - Val Accuracy: 0.7681 | Time: 5.49s
+2025-12-19 04:17:29 - DEBUG - [bert_cased] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:17:29 - INFO - 
+[bert_cased] Конфигурац 5/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:17:29 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:17:33 - DEBUG - [bert_cased] Early stopping at epoch 9
+2025-12-19 04:17:33 - INFO - [bert_cased] Config 5 - Val Accuracy: 0.7550 | Time: 4.48s
+2025-12-19 04:17:33 - DEBUG - [bert_cased] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:17:33 - INFO - 
+[bert_cased] Конфигурац 6/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:17:33 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:17:45 - INFO - [bert_cased] Config 6 - Val Accuracy: 0.7619 | Time: 11.23s
+2025-12-19 04:17:45 - DEBUG - [bert_cased] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:17:45 - INFO - 
+[bert_cased] Конфигурац 7/20: {'lstm_units': 128, 'dropout': 0.5, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:17:45 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:17:52 - DEBUG - [bert_cased] Early stopping at epoch 14
+2025-12-19 04:17:52 - INFO - [bert_cased] Config 7 - Val Accuracy: 0.7531 | Time: 7.83s
+2025-12-19 04:17:52 - DEBUG - [bert_cased] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:17:52 - INFO - 
+[bert_cased] Конфигурац 8/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:17:52 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:17:58 - DEBUG - [bert_cased] Early stopping at epoch 11
+2025-12-19 04:17:59 - INFO - [bert_cased] Config 8 - Val Accuracy: 0.7706 | Time: 5.99s
+2025-12-19 04:17:59 - DEBUG - [bert_cased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:17:59 - INFO - 
+[bert_cased] Конфигурац 9/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:17:59 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:18:03 - DEBUG - [bert_cased] Early stopping at epoch 9
+2025-12-19 04:18:03 - INFO - [bert_cased] Config 9 - Val Accuracy: 0.7588 | Time: 4.70s
+2025-12-19 04:18:03 - DEBUG - [bert_cased] GPU Memory: 0.05GB allocated, 0.06GB reserved
+2025-12-19 04:18:03 - INFO - 
+[bert_cased] Конфигурац 10/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:18:03 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:18:08 - DEBUG - [bert_cased] Early stopping at epoch 9
+2025-12-19 04:18:08 - INFO - [bert_cased] Config 10 - Val Accuracy: 0.7531 | Time: 4.64s
+2025-12-19 04:18:08 - DEBUG - [bert_cased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:18:08 - INFO - 
+[bert_cased] Конфигурац 11/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:18:08 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:18:15 - DEBUG - [bert_cased] Early stopping at epoch 10
+2025-12-19 04:18:15 - INFO - [bert_cased] Config 11 - Val Accuracy: 0.7481 | Time: 7.14s
+2025-12-19 04:18:15 - DEBUG - [bert_cased] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:18:15 - INFO - 
+[bert_cased] Конфигурац 12/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:18:15 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:18:24 - DEBUG - [bert_cased] Early stopping at epoch 13
+2025-12-19 04:18:24 - INFO - [bert_cased] Config 12 - Val Accuracy: 0.7656 | Time: 9.26s
+2025-12-19 04:18:24 - DEBUG - [bert_cased] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:18:24 - INFO - 
+[bert_cased] Конфигурац 13/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:18:24 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:18:32 - DEBUG - [bert_cased] Early stopping at epoch 12
+2025-12-19 04:18:32 - INFO - [bert_cased] Config 13 - Val Accuracy: 0.7612 | Time: 7.91s
+2025-12-19 04:18:32 - DEBUG - [bert_cased] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:18:32 - INFO - 
+[bert_cased] Конфигурац 14/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:18:32 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:18:38 - DEBUG - [bert_cased] Early stopping at epoch 10
+2025-12-19 04:18:38 - INFO - [bert_cased] Config 14 - Val Accuracy: 0.7662 | Time: 5.97s
+2025-12-19 04:18:38 - DEBUG - [bert_cased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:18:38 - INFO - 
+[bert_cased] Конфигурац 15/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:18:38 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:18:46 - DEBUG - [bert_cased] Early stopping at epoch 11
+2025-12-19 04:18:46 - INFO - [bert_cased] Config 15 - Val Accuracy: 0.7600 | Time: 7.22s
+2025-12-19 04:18:46 - DEBUG - [bert_cased] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:18:46 - INFO - 
+[bert_cased] Конфигурац 16/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:18:46 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:18:58 - DEBUG - [bert_cased] Early stopping at epoch 18
+2025-12-19 04:18:58 - INFO - [bert_cased] Config 16 - Val Accuracy: 0.7719 | Time: 12.33s
+2025-12-19 04:18:58 - DEBUG - [bert_cased] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:18:58 - INFO - 
+[bert_cased] Конфигурац 17/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:18:58 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:19:05 - DEBUG - [bert_cased] Early stopping at epoch 10
+2025-12-19 04:19:05 - INFO - [bert_cased] Config 17 - Val Accuracy: 0.7600 | Time: 6.95s
+2025-12-19 04:19:05 - DEBUG - [bert_cased] GPU Memory: 0.06GB allocated, 0.09GB reserved
+2025-12-19 04:19:05 - INFO - 
+[bert_cased] Конфигурац 18/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:19:05 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:19:10 - DEBUG - [bert_cased] Early stopping at epoch 7
+2025-12-19 04:19:10 - INFO - [bert_cased] Config 18 - Val Accuracy: 0.7456 | Time: 4.81s
+2025-12-19 04:19:10 - DEBUG - [bert_cased] GPU Memory: 0.06GB allocated, 0.07GB reserved
+2025-12-19 04:19:10 - INFO - 
+[bert_cased] Конфигурац 19/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:19:10 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:19:18 - DEBUG - [bert_cased] Early stopping at epoch 11
+2025-12-19 04:19:18 - INFO - [bert_cased] Config 19 - Val Accuracy: 0.7450 | Time: 8.16s
+2025-12-19 04:19:18 - DEBUG - [bert_cased] GPU Memory: 0.06GB allocated, 0.09GB reserved
+2025-12-19 04:19:18 - INFO - 
+[bert_cased] Конфигурац 20/20: {'lstm_units': 256, 'dropout': 0.5, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:19:18 - INFO - [bert_cased] Сургалт эхлэв...
+2025-12-19 04:19:28 - DEBUG - [bert_cased] Early stopping at epoch 13
+2025-12-19 04:19:28 - INFO - [bert_cased] Config 20 - Val Accuracy: 0.7156 | Time: 10.14s
+2025-12-19 04:19:28 - DEBUG - [bert_cased] GPU Memory: 0.06GB allocated, 0.07GB reserved
+2025-12-19 04:19:28 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:19:28 - INFO - [bert_cased] ҮР ДҮН - VALIDATION
+2025-12-19 04:19:28 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:19:28 - INFO - [bert_cased] Best Val Accuracy: 0.7719
+2025-12-19 04:19:28 - INFO - [bert_cased] Best Config: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:19:28 - INFO - [bert_cased] Top Configurations:
+2025-12-19 04:19:28 - INFO - [bert_cased]   1. {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005} → Val Acc: 0.7719
+2025-12-19 04:19:28 - INFO - [bert_cased]   2. {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001} → Val Acc: 0.7706
+2025-12-19 04:19:28 - INFO - [bert_cased]   3. {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001} → Val Acc: 0.7694
+2025-12-19 04:19:28 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:19:28 - INFO - [bert_cased] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 04:19:28 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:19:28 - INFO - [bert_cased] Test set дээр үнэлж байна...
+2025-12-19 04:19:28 - INFO - [bert_cased] Test Accuracy: 0.7770
+2025-12-19 04:19:28 - INFO - [bert_cased] Classification Report:
+2025-12-19 04:19:28 - INFO - [bert_cased]                 precision    recall  f1-score   support
+2025-12-19 04:19:28 - INFO - [bert_cased]       Negative       0.76      0.80      0.78       994
+2025-12-19 04:19:28 - INFO - [bert_cased]       Positive       0.79      0.76      0.77      1006
+2025-12-19 04:19:28 - INFO - [bert_cased]       accuracy                           0.78      2000
+2025-12-19 04:19:28 - INFO - [bert_cased]      macro avg       0.78      0.78      0.78      2000
+2025-12-19 04:19:28 - INFO - [bert_cased]   weighted avg       0.78      0.78      0.78      2000
+2025-12-19 04:19:28 - INFO - [bert_cased] Confusion Matrix:
+2025-12-19 04:19:28 - INFO - [bert_cased]   TN=  792 | FP=  202
+2025-12-19 04:19:28 - INFO - [bert_cased]   FN=  244 | TP=  762
+2025-12-19 04:19:28 - INFO - [bert_cased] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 04:19:28 - DEBUG - [bert_cased] Дэлгэрэнгүй үр дүн: logs\detailed_lstm_pytorch_bert_cased_20251219_041655.csv
+2025-12-19 04:19:28 - INFO - [bert_cased] Шилдэг модел: models\best_lstm_pytorch_bert_cased_20251219_041655.pt
+2025-12-19 04:19:28 - INFO - [bert_cased] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 04:19:28 - INFO - ================================================================================
+
+2025-12-19 04:23:42 - INFO - 
+================================================================================
+2025-12-19 04:23:42 - INFO - НЭВТРЭХ: ROBERTA ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - PyTorch LSTM
+2025-12-19 04:23:42 - INFO - ================================================================================
+2025-12-19 04:23:42 - INFO - Огноо ба цаг: 2025-12-19 04:23:42
+2025-12-19 04:23:42 - INFO - Эмбеддингийн төрөл: roberta
+2025-12-19 04:23:42 - INFO - Өгөгдлийн хэмжээ: (10000, 768)
+2025-12-19 04:23:42 - INFO - Лэйбэлийн тоо: 10000
+2025-12-19 04:23:42 - INFO - Төхөөрөмж: cuda
+2025-12-19 04:23:42 - INFO - GPU: NVIDIA GeForce RTX 5060
+2025-12-19 04:23:42 - INFO - [roberta] 20 конфигурац туршиж байна...
+2025-12-19 04:23:42 - INFO - [roberta] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 04:23:42 - INFO - [roberta] Train: (6400, 768) | Val: (1600, 768) | Test: (2000, 768)
+2025-12-19 04:23:42 - INFO - [roberta] Өгөгдлийг CPU дээр үлдээж, batch-аар GPU-руу илгээнэ (Memory efficient)
+2025-12-19 04:23:42 - INFO - [roberta] GPU санах ойг цэвэрлэлээ
+2025-12-19 04:23:42 - INFO - 
+[roberta] Конфигурац 1/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:23:44 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:24:00 - DEBUG - [roberta] Early stopping at epoch 15
+2025-12-19 04:24:00 - INFO - [roberta] Config 1 - Val Accuracy: 0.7444 | Time: 18.26s
+2025-12-19 04:24:00 - DEBUG - [roberta] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:24:00 - INFO - 
+[roberta] Конфигурац 2/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:24:00 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:24:17 - DEBUG - [roberta] Early stopping at epoch 17
+2025-12-19 04:24:17 - INFO - [roberta] Config 2 - Val Accuracy: 0.7594 | Time: 16.74s
+2025-12-19 04:24:17 - DEBUG - [roberta] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:24:17 - INFO - 
+[roberta] Конфигурац 3/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:24:17 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:24:39 - INFO - [roberta] Config 3 - Val Accuracy: 0.7656 | Time: 21.79s
+2025-12-19 04:24:39 - DEBUG - [roberta] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:24:39 - INFO - 
+[roberta] Конфигурац 4/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:24:39 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:24:48 - DEBUG - [roberta] Early stopping at epoch 9
+2025-12-19 04:24:48 - INFO - [roberta] Config 4 - Val Accuracy: 0.7512 | Time: 8.75s
+2025-12-19 04:24:48 - DEBUG - [roberta] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:24:48 - INFO - 
+[roberta] Конфигурац 5/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:24:48 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:25:04 - DEBUG - [roberta] Early stopping at epoch 15
+2025-12-19 04:25:04 - INFO - [roberta] Config 5 - Val Accuracy: 0.7669 | Time: 16.19s
+2025-12-19 04:25:04 - DEBUG - [roberta] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:25:04 - INFO - 
+[roberta] Конфигурац 6/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:25:04 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:25:21 - DEBUG - [roberta] Early stopping at epoch 17
+2025-12-19 04:25:21 - INFO - [roberta] Config 6 - Val Accuracy: 0.7631 | Time: 17.29s
+2025-12-19 04:25:21 - DEBUG - [roberta] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:25:21 - INFO - 
+[roberta] Конфигурац 7/20: {'lstm_units': 128, 'dropout': 0.5, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:25:21 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:25:32 - DEBUG - [roberta] Early stopping at epoch 10
+2025-12-19 04:25:32 - INFO - [roberta] Config 7 - Val Accuracy: 0.7575 | Time: 10.51s
+2025-12-19 04:25:32 - DEBUG - [roberta] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:25:32 - INFO - 
+[roberta] Конфигурац 8/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:25:32 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:25:41 - DEBUG - [roberta] Early stopping at epoch 9
+2025-12-19 04:25:41 - INFO - [roberta] Config 8 - Val Accuracy: 0.7638 | Time: 9.39s
+2025-12-19 04:25:41 - DEBUG - [roberta] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:25:41 - INFO - 
+[roberta] Конфигурац 9/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:25:41 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:25:56 - DEBUG - [roberta] Early stopping at epoch 14
+2025-12-19 04:25:56 - INFO - [roberta] Config 9 - Val Accuracy: 0.7731 | Time: 14.34s
+2025-12-19 04:25:56 - DEBUG - [roberta] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:25:56 - INFO - 
+[roberta] Конфигурац 10/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:25:56 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:26:09 - DEBUG - [roberta] Early stopping at epoch 12
+2025-12-19 04:26:09 - INFO - [roberta] Config 10 - Val Accuracy: 0.7588 | Time: 12.86s
+2025-12-19 04:26:09 - DEBUG - [roberta] GPU Memory: 0.05GB allocated, 0.06GB reserved
+2025-12-19 04:26:09 - INFO - 
+[roberta] Конфигурац 11/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:26:09 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:26:20 - DEBUG - [roberta] Early stopping at epoch 8
+2025-12-19 04:26:20 - INFO - [roberta] Config 11 - Val Accuracy: 0.7675 | Time: 10.96s
+2025-12-19 04:26:20 - DEBUG - [roberta] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:26:20 - INFO - 
+[roberta] Конфигурац 12/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:26:20 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:26:38 - DEBUG - [roberta] Early stopping at epoch 14
+2025-12-19 04:26:38 - INFO - [roberta] Config 12 - Val Accuracy: 0.7650 | Time: 17.88s
+2025-12-19 04:26:38 - DEBUG - [roberta] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:26:38 - INFO - 
+[roberta] Конфигурац 13/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:26:38 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:27:00 - DEBUG - [roberta] Early stopping at epoch 17
+2025-12-19 04:27:00 - INFO - [roberta] Config 13 - Val Accuracy: 0.7581 | Time: 22.39s
+2025-12-19 04:27:00 - DEBUG - [roberta] GPU Memory: 0.03GB allocated, 0.06GB reserved
+2025-12-19 04:27:00 - INFO - 
+[roberta] Конфигурац 14/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:27:00 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:27:24 - DEBUG - [roberta] Early stopping at epoch 19
+2025-12-19 04:27:24 - INFO - [roberta] Config 14 - Val Accuracy: 0.7544 | Time: 24.04s
+2025-12-19 04:27:24 - DEBUG - [roberta] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:27:24 - INFO - 
+[roberta] Конфигурац 15/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:27:24 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:27:40 - DEBUG - [roberta] Early stopping at epoch 13
+2025-12-19 04:27:40 - INFO - [roberta] Config 15 - Val Accuracy: 0.7594 | Time: 15.49s
+2025-12-19 04:27:40 - DEBUG - [roberta] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:27:40 - INFO - 
+[roberta] Конфигурац 16/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:27:40 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:28:04 - DEBUG - [roberta] Early stopping at epoch 20
+2025-12-19 04:28:04 - INFO - [roberta] Config 16 - Val Accuracy: 0.7494 | Time: 24.56s
+2025-12-19 04:28:04 - DEBUG - [roberta] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:28:04 - INFO - 
+[roberta] Конфигурац 17/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:28:04 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:28:28 - DEBUG - [roberta] Early stopping at epoch 16
+2025-12-19 04:28:28 - INFO - [roberta] Config 17 - Val Accuracy: 0.7750 | Time: 23.72s
+2025-12-19 04:28:28 - DEBUG - [roberta] GPU Memory: 0.05GB allocated, 0.08GB reserved
+2025-12-19 04:28:28 - INFO - 
+[roberta] Конфигурац 18/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:28:28 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:28:49 - DEBUG - [roberta] Early stopping at epoch 15
+2025-12-19 04:28:50 - INFO - [roberta] Config 18 - Val Accuracy: 0.7494 | Time: 21.25s
+2025-12-19 04:28:50 - DEBUG - [roberta] GPU Memory: 0.07GB allocated, 0.08GB reserved
+2025-12-19 04:28:50 - INFO - 
+[roberta] Конфигурац 19/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:28:50 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:29:18 - INFO - [roberta] Config 19 - Val Accuracy: 0.7644 | Time: 28.37s
+2025-12-19 04:29:18 - DEBUG - [roberta] GPU Memory: 0.07GB allocated, 0.09GB reserved
+2025-12-19 04:29:18 - INFO - 
+[roberta] Конфигурац 20/20: {'lstm_units': 256, 'dropout': 0.5, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:29:18 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 04:29:47 - INFO - [roberta] Config 20 - Val Accuracy: 0.7538 | Time: 28.53s
+2025-12-19 04:29:47 - DEBUG - [roberta] GPU Memory: 0.07GB allocated, 0.09GB reserved
+2025-12-19 04:29:47 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:29:47 - INFO - [roberta] ҮР ДҮН - VALIDATION
+2025-12-19 04:29:47 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:29:47 - INFO - [roberta] Best Val Accuracy: 0.7750
+2025-12-19 04:29:47 - INFO - [roberta] Best Config: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:29:47 - INFO - [roberta] Top Configurations:
+2025-12-19 04:29:47 - INFO - [roberta]   1. {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001} → Val Acc: 0.7750
+2025-12-19 04:29:47 - INFO - [roberta]   2. {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001} → Val Acc: 0.7731
+2025-12-19 04:29:47 - INFO - [roberta]   3. {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001} → Val Acc: 0.7675
+2025-12-19 04:29:47 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:29:47 - INFO - [roberta] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 04:29:47 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:29:47 - INFO - [roberta] Test set дээр үнэлж байна...
+2025-12-19 04:29:47 - INFO - [roberta] Test Accuracy: 0.7660
+2025-12-19 04:29:47 - INFO - [roberta] Classification Report:
+2025-12-19 04:29:47 - INFO - [roberta]                 precision    recall  f1-score   support
+2025-12-19 04:29:47 - INFO - [roberta]       Negative       0.83      0.67      0.74       994
+2025-12-19 04:29:47 - INFO - [roberta]       Positive       0.73      0.86      0.79      1006
+2025-12-19 04:29:47 - INFO - [roberta]       accuracy                           0.77      2000
+2025-12-19 04:29:47 - INFO - [roberta]      macro avg       0.78      0.77      0.76      2000
+2025-12-19 04:29:47 - INFO - [roberta]   weighted avg       0.78      0.77      0.76      2000
+2025-12-19 04:29:47 - INFO - [roberta] Confusion Matrix:
+2025-12-19 04:29:47 - INFO - [roberta]   TN=  667 | FP=  327
+2025-12-19 04:29:47 - INFO - [roberta]   FN=  141 | TP=  865
+2025-12-19 04:29:47 - INFO - [roberta] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 04:29:47 - DEBUG - [roberta] Дэлгэрэнгүй үр дүн: logs\detailed_lstm_pytorch_roberta_20251219_042342.csv
+2025-12-19 04:29:47 - INFO - [roberta] Шилдэг модел: models\best_lstm_pytorch_roberta_20251219_042342.pt
+2025-12-19 04:29:47 - INFO - [roberta] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 04:29:47 - INFO - ================================================================================
+
+2025-12-19 04:30:54 - INFO - 
+================================================================================
+2025-12-19 04:30:54 - INFO - НЭВТРЭХ: ALBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - PyTorch LSTM
+2025-12-19 04:30:54 - INFO - ================================================================================
+2025-12-19 04:30:54 - INFO - Огноо ба цаг: 2025-12-19 04:30:54
+2025-12-19 04:30:54 - INFO - Эмбеддингийн төрөл: albert
+2025-12-19 04:30:54 - INFO - Өгөгдлийн хэмжээ: (10000, 768)
+2025-12-19 04:30:54 - INFO - Лэйбэлийн тоо: 10000
+2025-12-19 04:30:54 - INFO - Төхөөрөмж: cuda
+2025-12-19 04:30:54 - INFO - GPU: NVIDIA GeForce RTX 5060
+2025-12-19 04:30:54 - INFO - [albert] 20 конфигурац туршиж байна...
+2025-12-19 04:30:54 - INFO - [albert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 04:30:56 - INFO - [albert] Train: (6400, 768) | Val: (1600, 768) | Test: (2000, 768)
+2025-12-19 04:30:56 - INFO - [albert] Өгөгдлийг CPU дээр үлдээж, batch-аар GPU-руу илгээнэ (Memory efficient)
+2025-12-19 04:30:56 - INFO - [albert] GPU санах ойг цэвэрлэлээ
+2025-12-19 04:30:56 - INFO - 
+[albert] Конфигурац 1/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:31:07 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:31:26 - DEBUG - [albert] Early stopping at epoch 15
+2025-12-19 04:31:26 - INFO - [albert] Config 1 - Val Accuracy: 0.7806 | Time: 29.96s
+2025-12-19 04:31:26 - DEBUG - [albert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:31:26 - INFO - 
+[albert] Конфигурац 2/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:31:26 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:31:44 - INFO - [albert] Config 2 - Val Accuracy: 0.7769 | Time: 17.95s
+2025-12-19 04:31:44 - DEBUG - [albert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:31:44 - INFO - 
+[albert] Конфигурац 3/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:31:44 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:31:52 - DEBUG - [albert] Early stopping at epoch 9
+2025-12-19 04:31:52 - INFO - [albert] Config 3 - Val Accuracy: 0.7837 | Time: 8.01s
+2025-12-19 04:31:52 - DEBUG - [albert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:31:52 - INFO - 
+[albert] Конфигурац 4/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:31:52 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:32:03 - DEBUG - [albert] Early stopping at epoch 12
+2025-12-19 04:32:03 - INFO - [albert] Config 4 - Val Accuracy: 0.7812 | Time: 10.91s
+2025-12-19 04:32:03 - DEBUG - [albert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:32:03 - INFO - 
+[albert] Конфигурац 5/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:32:03 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:32:14 - DEBUG - [albert] Early stopping at epoch 12
+2025-12-19 04:32:14 - INFO - [albert] Config 5 - Val Accuracy: 0.7819 | Time: 10.82s
+2025-12-19 04:32:14 - DEBUG - [albert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:32:14 - INFO - 
+[albert] Конфигурац 6/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:32:14 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:32:26 - DEBUG - [albert] Early stopping at epoch 14
+2025-12-19 04:32:26 - INFO - [albert] Config 6 - Val Accuracy: 0.7831 | Time: 12.67s
+2025-12-19 04:32:26 - DEBUG - [albert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:32:26 - INFO - 
+[albert] Конфигурац 7/20: {'lstm_units': 128, 'dropout': 0.5, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:32:26 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:32:36 - DEBUG - [albert] Early stopping at epoch 10
+2025-12-19 04:32:36 - INFO - [albert] Config 7 - Val Accuracy: 0.7831 | Time: 9.32s
+2025-12-19 04:32:36 - DEBUG - [albert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 04:32:36 - INFO - 
+[albert] Конфигурац 8/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:32:36 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:32:44 - DEBUG - [albert] Early stopping at epoch 8
+2025-12-19 04:32:44 - INFO - [albert] Config 8 - Val Accuracy: 0.7669 | Time: 7.78s
+2025-12-19 04:32:44 - DEBUG - [albert] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 04:32:44 - INFO - 
+[albert] Конфигурац 9/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:32:44 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:32:57 - DEBUG - [albert] Early stopping at epoch 13
+2025-12-19 04:32:57 - INFO - [albert] Config 9 - Val Accuracy: 0.7656 | Time: 13.33s
+2025-12-19 04:32:57 - DEBUG - [albert] GPU Memory: 0.04GB allocated, 0.05GB reserved
+2025-12-19 04:32:57 - INFO - 
+[albert] Конфигурац 10/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:32:57 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:33:16 - DEBUG - [albert] Early stopping at epoch 19
+2025-12-19 04:33:16 - INFO - [albert] Config 10 - Val Accuracy: 0.7788 | Time: 19.38s
+2025-12-19 04:33:16 - DEBUG - [albert] GPU Memory: 0.04GB allocated, 0.05GB reserved
+2025-12-19 04:33:16 - INFO - 
+[albert] Конфигурац 11/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:33:16 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:33:33 - DEBUG - [albert] Early stopping at epoch 15
+2025-12-19 04:33:33 - INFO - [albert] Config 11 - Val Accuracy: 0.7712 | Time: 16.84s
+2025-12-19 04:33:33 - DEBUG - [albert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:33:33 - INFO - 
+[albert] Конфигурац 12/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:33:33 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:33:44 - DEBUG - [albert] Early stopping at epoch 9
+2025-12-19 04:33:44 - INFO - [albert] Config 12 - Val Accuracy: 0.7831 | Time: 10.21s
+2025-12-19 04:33:44 - DEBUG - [albert] GPU Memory: 0.03GB allocated, 0.03GB reserved
+2025-12-19 04:33:44 - INFO - 
+[albert] Конфигурац 13/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:33:44 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:33:57 - DEBUG - [albert] Early stopping at epoch 13
+2025-12-19 04:33:57 - INFO - [albert] Config 13 - Val Accuracy: 0.7681 | Time: 13.55s
+2025-12-19 04:33:57 - DEBUG - [albert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:33:57 - INFO - 
+[albert] Конфигурац 14/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:33:57 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:34:11 - DEBUG - [albert] Early stopping at epoch 13
+2025-12-19 04:34:11 - INFO - [albert] Config 14 - Val Accuracy: 0.7831 | Time: 13.51s
+2025-12-19 04:34:11 - DEBUG - [albert] GPU Memory: 0.04GB allocated, 0.05GB reserved
+2025-12-19 04:34:11 - INFO - 
+[albert] Конфигурац 15/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:34:11 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:34:27 - DEBUG - [albert] Early stopping at epoch 16
+2025-12-19 04:34:28 - INFO - [albert] Config 15 - Val Accuracy: 0.7781 | Time: 16.56s
+2025-12-19 04:34:28 - DEBUG - [albert] GPU Memory: 0.04GB allocated, 0.05GB reserved
+2025-12-19 04:34:28 - INFO - 
+[albert] Конфигурац 16/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:34:28 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:34:42 - DEBUG - [albert] Early stopping at epoch 14
+2025-12-19 04:34:42 - INFO - [albert] Config 16 - Val Accuracy: 0.7875 | Time: 14.63s
+2025-12-19 04:34:42 - DEBUG - [albert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:34:42 - INFO - 
+[albert] Конфигурац 17/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:34:42 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:34:53 - DEBUG - [albert] Early stopping at epoch 9
+2025-12-19 04:34:53 - INFO - [albert] Config 17 - Val Accuracy: 0.7781 | Time: 10.84s
+2025-12-19 04:34:53 - DEBUG - [albert] GPU Memory: 0.06GB allocated, 0.07GB reserved
+2025-12-19 04:34:53 - INFO - 
+[albert] Конфигурац 18/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:34:53 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:35:05 - DEBUG - [albert] Early stopping at epoch 10
+2025-12-19 04:35:05 - INFO - [albert] Config 18 - Val Accuracy: 0.7731 | Time: 12.06s
+2025-12-19 04:35:05 - DEBUG - [albert] GPU Memory: 0.06GB allocated, 0.07GB reserved
+2025-12-19 04:35:05 - INFO - 
+[albert] Конфигурац 19/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:35:05 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:35:18 - DEBUG - [albert] Early stopping at epoch 11
+2025-12-19 04:35:19 - INFO - [albert] Config 19 - Val Accuracy: 0.7400 | Time: 13.25s
+2025-12-19 04:35:19 - DEBUG - [albert] GPU Memory: 0.06GB allocated, 0.07GB reserved
+2025-12-19 04:35:19 - INFO - 
+[albert] Конфигурац 20/20: {'lstm_units': 256, 'dropout': 0.5, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:35:19 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 04:35:43 - INFO - [albert] Config 20 - Val Accuracy: 0.7800 | Time: 24.05s
+2025-12-19 04:35:43 - DEBUG - [albert] GPU Memory: 0.06GB allocated, 0.07GB reserved
+2025-12-19 04:35:43 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:35:43 - INFO - [albert] ҮР ДҮН - VALIDATION
+2025-12-19 04:35:43 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:35:43 - INFO - [albert] Best Val Accuracy: 0.7875
+2025-12-19 04:35:43 - INFO - [albert] Best Config: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:35:43 - INFO - [albert] Top Configurations:
+2025-12-19 04:35:43 - INFO - [albert]   1. {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005} → Val Acc: 0.7875
+2025-12-19 04:35:43 - INFO - [albert]   2. {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005} → Val Acc: 0.7837
+2025-12-19 04:35:43 - INFO - [albert]   3. {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005} → Val Acc: 0.7831
+2025-12-19 04:35:43 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:35:43 - INFO - [albert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 04:35:43 - INFO - --------------------------------------------------------------------------------
+2025-12-19 04:35:43 - INFO - [albert] Test set дээр үнэлж байна...
+2025-12-19 04:35:43 - INFO - [albert] Test Accuracy: 0.7685
+2025-12-19 04:35:43 - INFO - [albert] Classification Report:
+2025-12-19 04:35:43 - INFO - [albert]                 precision    recall  f1-score   support
+2025-12-19 04:35:43 - INFO - [albert]       Negative       0.76      0.78      0.77       994
+2025-12-19 04:35:43 - INFO - [albert]       Positive       0.78      0.75      0.77      1006
+2025-12-19 04:35:43 - INFO - [albert]       accuracy                           0.77      2000
+2025-12-19 04:35:43 - INFO - [albert]      macro avg       0.77      0.77      0.77      2000
+2025-12-19 04:35:43 - INFO - [albert]   weighted avg       0.77      0.77      0.77      2000
+2025-12-19 04:35:43 - INFO - [albert] Confusion Matrix:
+2025-12-19 04:35:43 - INFO - [albert]   TN=  778 | FP=  216
+2025-12-19 04:35:43 - INFO - [albert]   FN=  247 | TP=  759
+2025-12-19 04:35:43 - INFO - [albert] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 04:35:43 - DEBUG - [albert] Дэлгэрэнгүй үр дүн: logs\detailed_lstm_pytorch_albert_20251219_043054.csv
+2025-12-19 04:35:43 - INFO - [albert] Шилдэг модел: models\best_lstm_pytorch_albert_20251219_043054.pt
+2025-12-19 04:35:43 - INFO - [albert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 04:35:43 - INFO - ================================================================================
+
+2025-12-19 04:36:01 - INFO - 
+================================================================================
+2025-12-19 04:36:01 - INFO - НЭВТРЭХ: SBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - PyTorch LSTM
+2025-12-19 04:36:01 - INFO - ================================================================================
+2025-12-19 04:36:01 - INFO - Огноо ба цаг: 2025-12-19 04:36:01
+2025-12-19 04:36:01 - INFO - Эмбеддингийн төрөл: sbert
+2025-12-19 04:36:01 - INFO - Өгөгдлийн хэмжээ: (10000, 384)
+2025-12-19 04:36:01 - INFO - Лэйбэлийн тоо: 10000
+2025-12-19 04:36:01 - INFO - Төхөөрөмж: cuda
+2025-12-19 04:36:01 - INFO - GPU: NVIDIA GeForce RTX 5060
+2025-12-19 04:36:01 - INFO - [sbert] 20 конфигурац туршиж байна...
+2025-12-19 04:36:01 - INFO - [sbert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 04:36:01 - INFO - [sbert] Train: (6400, 384) | Val: (1600, 384) | Test: (2000, 384)
+2025-12-19 04:36:01 - INFO - [sbert] Өгөгдлийг CPU дээр үлдээж, batch-аар GPU-руу илгээнэ (Memory efficient)
+2025-12-19 04:36:01 - INFO - [sbert] GPU санах ойг цэвэрлэлээ
+2025-12-19 04:36:01 - INFO - 
+[sbert] Конфигурац 1/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:36:02 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:36:13 - DEBUG - [sbert] Early stopping at epoch 12
+2025-12-19 04:36:13 - INFO - [sbert] Config 1 - Val Accuracy: 0.7669 | Time: 12.16s
+2025-12-19 04:36:13 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:36:13 - INFO - 
+[sbert] Конфигурац 2/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:36:13 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:36:24 - DEBUG - [sbert] Early stopping at epoch 11
+2025-12-19 04:36:24 - INFO - [sbert] Config 2 - Val Accuracy: 0.7706 | Time: 10.85s
+2025-12-19 04:36:24 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:36:24 - INFO - 
+[sbert] Конфигурац 3/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:36:24 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:36:37 - DEBUG - [sbert] Early stopping at epoch 13
+2025-12-19 04:36:37 - INFO - [sbert] Config 3 - Val Accuracy: 0.7744 | Time: 12.88s
+2025-12-19 04:36:37 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:36:37 - INFO - 
+[sbert] Конфигурац 4/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:36:37 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:36:46 - DEBUG - [sbert] Early stopping at epoch 10
+2025-12-19 04:36:46 - INFO - [sbert] Config 4 - Val Accuracy: 0.7719 | Time: 9.01s
+2025-12-19 04:36:46 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:36:46 - INFO - 
+[sbert] Конфигурац 5/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:36:46 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:36:54 - DEBUG - [sbert] Early stopping at epoch 9
+2025-12-19 04:36:54 - INFO - [sbert] Config 5 - Val Accuracy: 0.7606 | Time: 8.12s
+2025-12-19 04:36:54 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:36:54 - INFO - 
+[sbert] Конфигурац 6/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:36:54 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:37:06 - DEBUG - [sbert] Early stopping at epoch 13
+2025-12-19 04:37:06 - INFO - [sbert] Config 6 - Val Accuracy: 0.7681 | Time: 11.74s
+2025-12-19 04:37:06 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:37:06 - INFO - 
+[sbert] Конфигурац 7/20: {'lstm_units': 128, 'dropout': 0.5, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:37:06 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:37:16 - DEBUG - [sbert] Early stopping at epoch 11
+2025-12-19 04:37:16 - INFO - [sbert] Config 7 - Val Accuracy: 0.7731 | Time: 9.93s
+2025-12-19 04:37:16 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:37:16 - INFO - 
+[sbert] Конфигурац 8/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:37:16 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:37:24 - DEBUG - [sbert] Early stopping at epoch 9
+2025-12-19 04:37:24 - INFO - [sbert] Config 8 - Val Accuracy: 0.7662 | Time: 8.54s
+2025-12-19 04:37:24 - DEBUG - [sbert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:37:24 - INFO - 
+[sbert] Конфигурац 9/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 04:37:24 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:37:32 - DEBUG - [sbert] Early stopping at epoch 8
+2025-12-19 04:37:32 - INFO - [sbert] Config 9 - Val Accuracy: 0.7669 | Time: 8.05s
+2025-12-19 04:37:32 - DEBUG - [sbert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:37:32 - INFO - 
+[sbert] Конфигурац 10/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 04:37:32 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:37:43 - DEBUG - [sbert] Early stopping at epoch 11
+2025-12-19 04:37:43 - INFO - [sbert] Config 10 - Val Accuracy: 0.7725 | Time: 10.44s
+2025-12-19 04:37:43 - DEBUG - [sbert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:37:43 - INFO - 
+[sbert] Конфигурац 11/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:37:43 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:37:53 - DEBUG - [sbert] Early stopping at epoch 9
+2025-12-19 04:37:53 - INFO - [sbert] Config 11 - Val Accuracy: 0.7762 | Time: 10.01s
+2025-12-19 04:37:53 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:37:53 - INFO - 
+[sbert] Конфигурац 12/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:37:53 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:38:02 - DEBUG - [sbert] Early stopping at epoch 9
+2025-12-19 04:38:02 - INFO - [sbert] Config 12 - Val Accuracy: 0.7725 | Time: 9.24s
+2025-12-19 04:38:02 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:38:02 - INFO - 
+[sbert] Конфигурац 13/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:38:02 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:38:15 - DEBUG - [sbert] Early stopping at epoch 12
+2025-12-19 04:38:15 - INFO - [sbert] Config 13 - Val Accuracy: 0.7719 | Time: 12.35s
+2025-12-19 04:38:15 - DEBUG - [sbert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 04:38:15 - INFO - 
+[sbert] Конфигурац 14/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:38:15 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:38:27 - DEBUG - [sbert] Early stopping at epoch 11
+2025-12-19 04:38:27 - INFO - [sbert] Config 14 - Val Accuracy: 0.7631 | Time: 12.37s
+2025-12-19 04:38:27 - DEBUG - [sbert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:38:27 - INFO - 
+[sbert] Конфигурац 15/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:38:27 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:38:37 - DEBUG - [sbert] Early stopping at epoch 9
+2025-12-19 04:38:37 - INFO - [sbert] Config 15 - Val Accuracy: 0.7806 | Time: 10.10s
+2025-12-19 04:38:37 - DEBUG - [sbert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:38:37 - INFO - 
+[sbert] Конфигурац 16/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 04:38:37 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 04:38:52 - DEBUG - [sbert] Early stopping at epoch 14
+2025-12-19 04:38:52 - INFO - [sbert] Config 16 - Val Accuracy: 0.7738 | Time: 14.51s
+2025-12-19 04:38:52 - DEBUG - [sbert] GPU Memory: 0.03GB allocated, 0.05GB reserved
+2025-12-19 04:38:52 - INFO - 
+[sbert] Конфигурац 17/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 04:38:52 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:10:24 - DEBUG - [sbert] Early stopping at epoch 10
+2025-12-19 07:10:24 - INFO - [sbert] Config 17 - Val Accuracy: 0.7769 | Time: 9091.81s
+2025-12-19 07:10:24 - DEBUG - [sbert] GPU Memory: 0.05GB allocated, 0.05GB reserved
+2025-12-19 07:10:24 - INFO - 
+[sbert] Конфигурац 18/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:10:24 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:10:34 - DEBUG - [sbert] Early stopping at epoch 7
+2025-12-19 07:10:34 - INFO - [sbert] Config 18 - Val Accuracy: 0.7675 | Time: 10.51s
+2025-12-19 07:10:34 - DEBUG - [sbert] GPU Memory: 0.04GB allocated, 0.07GB reserved
+2025-12-19 07:10:34 - INFO - 
+[sbert] Конфигурац 19/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 07:10:34 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:10:51 - DEBUG - [sbert] Early stopping at epoch 11
+2025-12-19 07:10:51 - INFO - [sbert] Config 19 - Val Accuracy: 0.7656 | Time: 16.84s
+2025-12-19 07:10:51 - DEBUG - [sbert] GPU Memory: 0.04GB allocated, 0.05GB reserved
+2025-12-19 07:10:51 - INFO - 
+[sbert] Конфигурац 20/20: {'lstm_units': 256, 'dropout': 0.5, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:10:51 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:11:05 - DEBUG - [sbert] Early stopping at epoch 10
+2025-12-19 07:11:06 - INFO - [sbert] Config 20 - Val Accuracy: 0.7769 | Time: 14.28s
+2025-12-19 07:11:06 - DEBUG - [sbert] GPU Memory: 0.04GB allocated, 0.07GB reserved
+2025-12-19 07:11:06 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:11:06 - INFO - [sbert] ҮР ДҮН - VALIDATION
+2025-12-19 07:11:06 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:11:06 - INFO - [sbert] Best Val Accuracy: 0.7806
+2025-12-19 07:11:06 - INFO - [sbert] Best Config: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:11:06 - INFO - [sbert] Top Configurations:
+2025-12-19 07:11:06 - INFO - [sbert]   1. {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001} → Val Acc: 0.7806
+2025-12-19 07:11:06 - INFO - [sbert]   2. {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001} → Val Acc: 0.7769
+2025-12-19 07:11:06 - INFO - [sbert]   3. {'lstm_units': 256, 'dropout': 0.5, 'bidirectional': True, 'lr': 0.001} → Val Acc: 0.7769
+2025-12-19 07:11:06 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:11:06 - INFO - [sbert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 07:11:06 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:11:06 - INFO - [sbert] Test set дээр үнэлж байна...
+2025-12-19 07:11:06 - INFO - [sbert] Test Accuracy: 0.7820
+2025-12-19 07:11:06 - INFO - [sbert] Classification Report:
+2025-12-19 07:11:06 - INFO - [sbert]                 precision    recall  f1-score   support
+2025-12-19 07:11:06 - INFO - [sbert]       Negative       0.80      0.74      0.77       994
+2025-12-19 07:11:06 - INFO - [sbert]       Positive       0.76      0.82      0.79      1006
+2025-12-19 07:11:06 - INFO - [sbert]       accuracy                           0.78      2000
+2025-12-19 07:11:06 - INFO - [sbert]      macro avg       0.78      0.78      0.78      2000
+2025-12-19 07:11:06 - INFO - [sbert]   weighted avg       0.78      0.78      0.78      2000
+2025-12-19 07:11:06 - INFO - [sbert] Confusion Matrix:
+2025-12-19 07:11:06 - INFO - [sbert]   TN=  739 | FP=  255
+2025-12-19 07:11:06 - INFO - [sbert]   FN=  181 | TP=  825
+2025-12-19 07:11:06 - INFO - [sbert] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 07:11:06 - DEBUG - [sbert] Дэлгэрэнгүй үр дүн: logs\detailed_lstm_pytorch_sbert_20251219_043601.csv
+2025-12-19 07:11:06 - INFO - [sbert] Шилдэг модел: models\best_lstm_pytorch_sbert_20251219_043601.pt
+2025-12-19 07:11:06 - INFO - [sbert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 07:11:06 - INFO - ================================================================================
+
+2025-12-19 07:14:05 - INFO - 
+================================================================================
+2025-12-19 07:14:05 - INFO - НЭВТРЭХ: HATEBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - PyTorch LSTM
+2025-12-19 07:14:05 - INFO - ================================================================================
+2025-12-19 07:14:05 - INFO - Огноо ба цаг: 2025-12-19 07:14:05
+2025-12-19 07:14:05 - INFO - Эмбеддингийн төрөл: hatebert
+2025-12-19 07:14:05 - INFO - Өгөгдлийн хэмжээ: (10000, 768)
+2025-12-19 07:14:05 - INFO - Лэйбэлийн тоо: 10000
+2025-12-19 07:14:05 - INFO - Төхөөрөмж: cuda
+2025-12-19 07:14:05 - INFO - GPU: NVIDIA GeForce RTX 5060
+2025-12-19 07:14:05 - INFO - [hatebert] 20 конфигурац туршиж байна...
+2025-12-19 07:14:05 - INFO - [hatebert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 07:14:07 - INFO - [hatebert] Train: (6400, 768) | Val: (1600, 768) | Test: (2000, 768)
+2025-12-19 07:14:07 - INFO - [hatebert] Өгөгдлийг CPU дээр үлдээж, batch-аар GPU-руу илгээнэ (Memory efficient)
+2025-12-19 07:14:07 - INFO - [hatebert] GPU санах ойг цэвэрлэлээ
+2025-12-19 07:14:07 - INFO - 
+[hatebert] Конфигурац 1/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 07:14:23 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:14:37 - DEBUG - [hatebert] Early stopping at epoch 10
+2025-12-19 07:14:37 - INFO - [hatebert] Config 1 - Val Accuracy: 0.7881 | Time: 29.97s
+2025-12-19 07:14:37 - DEBUG - [hatebert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 07:14:37 - INFO - 
+[hatebert] Конфигурац 2/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 07:14:37 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:14:49 - DEBUG - [hatebert] Early stopping at epoch 11
+2025-12-19 07:14:49 - INFO - [hatebert] Config 2 - Val Accuracy: 0.7925 | Time: 11.77s
+2025-12-19 07:14:49 - DEBUG - [hatebert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 07:14:49 - INFO - 
+[hatebert] Конфигурац 3/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 07:14:49 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:15:03 - DEBUG - [hatebert] Early stopping at epoch 14
+2025-12-19 07:15:03 - INFO - [hatebert] Config 3 - Val Accuracy: 0.7856 | Time: 14.25s
+2025-12-19 07:15:03 - DEBUG - [hatebert] GPU Memory: 0.02GB allocated, 0.03GB reserved
+2025-12-19 07:15:03 - INFO - 
+[hatebert] Конфигурац 4/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 07:15:03 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:15:13 - DEBUG - [hatebert] Early stopping at epoch 10
+2025-12-19 07:15:13 - INFO - [hatebert] Config 4 - Val Accuracy: 0.7744 | Time: 10.33s
+2025-12-19 07:15:13 - DEBUG - [hatebert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 07:15:13 - INFO - 
+[hatebert] Конфигурац 5/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 07:15:13 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:15:21 - DEBUG - [hatebert] Early stopping at epoch 7
+2025-12-19 07:15:21 - INFO - [hatebert] Config 5 - Val Accuracy: 0.7963 | Time: 7.52s
+2025-12-19 07:15:21 - DEBUG - [hatebert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 07:15:21 - INFO - 
+[hatebert] Конфигурац 6/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 07:15:21 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:15:30 - DEBUG - [hatebert] Early stopping at epoch 9
+2025-12-19 07:15:30 - INFO - [hatebert] Config 6 - Val Accuracy: 0.7894 | Time: 8.92s
+2025-12-19 07:15:30 - DEBUG - [hatebert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 07:15:30 - INFO - 
+[hatebert] Конфигурац 7/20: {'lstm_units': 128, 'dropout': 0.5, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 07:15:30 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:15:40 - DEBUG - [hatebert] Early stopping at epoch 10
+2025-12-19 07:15:40 - INFO - [hatebert] Config 7 - Val Accuracy: 0.7900 | Time: 9.97s
+2025-12-19 07:15:40 - DEBUG - [hatebert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 07:15:40 - INFO - 
+[hatebert] Конфигурац 8/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 07:15:40 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:15:47 - DEBUG - [hatebert] Early stopping at epoch 7
+2025-12-19 07:15:48 - INFO - [hatebert] Config 8 - Val Accuracy: 0.7800 | Time: 7.41s
+2025-12-19 07:15:48 - DEBUG - [hatebert] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 07:15:48 - INFO - 
+[hatebert] Конфигурац 9/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 07:15:48 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:15:55 - DEBUG - [hatebert] Early stopping at epoch 7
+2025-12-19 07:15:55 - INFO - [hatebert] Config 9 - Val Accuracy: 0.7919 | Time: 7.82s
+2025-12-19 07:15:55 - DEBUG - [hatebert] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 07:15:55 - INFO - 
+[hatebert] Конфигурац 10/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005}
+2025-12-19 07:15:55 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:16:05 - DEBUG - [hatebert] Early stopping at epoch 9
+2025-12-19 07:16:05 - INFO - [hatebert] Config 10 - Val Accuracy: 0.7950 | Time: 9.59s
+2025-12-19 07:16:05 - DEBUG - [hatebert] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 07:16:05 - INFO - 
+[hatebert] Конфигурац 11/20: {'lstm_units': 64, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:16:05 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:16:16 - DEBUG - [hatebert] Early stopping at epoch 8
+2025-12-19 07:16:16 - INFO - [hatebert] Config 11 - Val Accuracy: 0.7837 | Time: 11.08s
+2025-12-19 07:16:16 - DEBUG - [hatebert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 07:16:16 - INFO - 
+[hatebert] Конфигурац 12/20: {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:16:16 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:16:33 - DEBUG - [hatebert] Early stopping at epoch 12
+2025-12-19 07:16:33 - INFO - [hatebert] Config 12 - Val Accuracy: 0.7744 | Time: 16.89s
+2025-12-19 07:16:33 - DEBUG - [hatebert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 07:16:33 - INFO - 
+[hatebert] Конфигурац 13/20: {'lstm_units': 64, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 07:16:33 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:16:53 - DEBUG - [hatebert] Early stopping at epoch 14
+2025-12-19 07:16:53 - INFO - [hatebert] Config 13 - Val Accuracy: 0.7894 | Time: 20.04s
+2025-12-19 07:16:53 - DEBUG - [hatebert] GPU Memory: 0.03GB allocated, 0.04GB reserved
+2025-12-19 07:16:53 - INFO - 
+[hatebert] Конфигурац 14/20: {'lstm_units': 128, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:16:53 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:17:07 - DEBUG - [hatebert] Early stopping at epoch 10
+2025-12-19 07:17:07 - INFO - [hatebert] Config 14 - Val Accuracy: 0.7825 | Time: 13.73s
+2025-12-19 07:17:07 - DEBUG - [hatebert] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 07:17:07 - INFO - 
+[hatebert] Конфигурац 15/20: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:17:07 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:17:17 - DEBUG - [hatebert] Early stopping at epoch 8
+2025-12-19 07:17:17 - INFO - [hatebert] Config 15 - Val Accuracy: 0.7775 | Time: 10.11s
+2025-12-19 07:17:17 - DEBUG - [hatebert] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 07:17:17 - INFO - 
+[hatebert] Конфигурац 16/20: {'lstm_units': 128, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 07:17:17 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:17:33 - DEBUG - [hatebert] Early stopping at epoch 8
+2025-12-19 07:17:34 - INFO - [hatebert] Config 16 - Val Accuracy: 0.7837 | Time: 16.08s
+2025-12-19 07:17:34 - DEBUG - [hatebert] GPU Memory: 0.04GB allocated, 0.06GB reserved
+2025-12-19 07:17:34 - INFO - 
+[hatebert] Конфигурац 17/20: {'lstm_units': 256, 'dropout': 0.2, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:17:34 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:17:49 - DEBUG - [hatebert] Early stopping at epoch 10
+2025-12-19 07:17:50 - INFO - [hatebert] Config 17 - Val Accuracy: 0.7762 | Time: 15.97s
+2025-12-19 07:17:50 - DEBUG - [hatebert] GPU Memory: 0.06GB allocated, 0.09GB reserved
+2025-12-19 07:17:50 - INFO - 
+[hatebert] Конфигурац 18/20: {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:17:50 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:18:10 - DEBUG - [hatebert] Early stopping at epoch 13
+2025-12-19 07:18:10 - INFO - [hatebert] Config 18 - Val Accuracy: 0.7719 | Time: 20.40s
+2025-12-19 07:18:10 - DEBUG - [hatebert] GPU Memory: 0.06GB allocated, 0.07GB reserved
+2025-12-19 07:18:10 - INFO - 
+[hatebert] Конфигурац 19/20: {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': True, 'lr': 0.0005}
+2025-12-19 07:18:10 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:18:22 - DEBUG - [hatebert] Early stopping at epoch 8
+2025-12-19 07:18:22 - INFO - [hatebert] Config 19 - Val Accuracy: 0.7913 | Time: 11.52s
+2025-12-19 07:18:22 - DEBUG - [hatebert] GPU Memory: 0.06GB allocated, 0.09GB reserved
+2025-12-19 07:18:22 - INFO - 
+[hatebert] Конфигурац 20/20: {'lstm_units': 256, 'dropout': 0.5, 'bidirectional': True, 'lr': 0.001}
+2025-12-19 07:18:22 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:18:39 - DEBUG - [hatebert] Early stopping at epoch 11
+2025-12-19 07:18:39 - INFO - [hatebert] Config 20 - Val Accuracy: 0.7831 | Time: 17.12s
+2025-12-19 07:18:39 - DEBUG - [hatebert] GPU Memory: 0.06GB allocated, 0.07GB reserved
+2025-12-19 07:18:39 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:18:39 - INFO - [hatebert] ҮР ДҮН - VALIDATION
+2025-12-19 07:18:39 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:18:39 - INFO - [hatebert] Best Val Accuracy: 0.7963
+2025-12-19 07:18:39 - INFO - [hatebert] Best Config: {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001}
+2025-12-19 07:18:39 - INFO - [hatebert] Top Configurations:
+2025-12-19 07:18:39 - INFO - [hatebert]   1. {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001} → Val Acc: 0.7963
+2025-12-19 07:18:39 - INFO - [hatebert]   2. {'lstm_units': 256, 'dropout': 0.4, 'bidirectional': False, 'lr': 0.0005} → Val Acc: 0.7950
+2025-12-19 07:18:39 - INFO - [hatebert]   3. {'lstm_units': 64, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001} → Val Acc: 0.7925
+2025-12-19 07:18:39 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:18:39 - INFO - [hatebert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 07:18:39 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:18:39 - INFO - [hatebert] Test set дээр үнэлж байна...
+2025-12-19 07:18:39 - INFO - [hatebert] Test Accuracy: 0.7940
+2025-12-19 07:18:39 - INFO - [hatebert] Classification Report:
+2025-12-19 07:18:39 - INFO - [hatebert]                 precision    recall  f1-score   support
+2025-12-19 07:18:39 - INFO - [hatebert]       Negative       0.86      0.70      0.77       994
+2025-12-19 07:18:39 - INFO - [hatebert]       Positive       0.75      0.89      0.81      1006
+2025-12-19 07:18:39 - INFO - [hatebert]       accuracy                           0.79      2000
+2025-12-19 07:18:39 - INFO - [hatebert]      macro avg       0.80      0.79      0.79      2000
+2025-12-19 07:18:39 - INFO - [hatebert]   weighted avg       0.80      0.79      0.79      2000
+2025-12-19 07:18:39 - INFO - [hatebert] Confusion Matrix:
+2025-12-19 07:18:39 - INFO - [hatebert]   TN=  696 | FP=  298
+2025-12-19 07:18:39 - INFO - [hatebert]   FN=  114 | TP=  892
+2025-12-19 07:18:39 - INFO - [hatebert] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 07:18:39 - DEBUG - [hatebert] Дэлгэрэнгүй үр дүн: logs\detailed_lstm_pytorch_hatebert_20251219_071405.csv
+2025-12-19 07:18:39 - INFO - [hatebert] Шилдэг модел: models\best_lstm_pytorch_hatebert_20251219_071405.pt
+2025-12-19 07:18:39 - INFO - [hatebert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 07:18:39 - INFO - ================================================================================
+

@@ -1,0 +1,370 @@
+2025-12-19 07:26:21 - INFO - 
+================================================================================
+2025-12-19 07:26:21 - INFO - НЭВТРЭХ: BERT_UNCASED ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - XGBoost GPU
+2025-12-19 07:26:21 - INFO - ================================================================================
+2025-12-19 07:26:21 - INFO - Огноо ба цаг: 2025-12-19 07:26:21
+2025-12-19 07:26:21 - INFO - Эмбеддингийн төрөл: bert_uncased
+2025-12-19 07:26:21 - INFO - Өгөгдлийн хэмжээ: (49582, 768)
+2025-12-19 07:26:21 - INFO - Лэйбэлийн тоо: 49582
+2025-12-19 07:26:21 - INFO - Төхөөрөмж: GPU
+2025-12-19 07:26:21 - INFO - [bert_uncased] 8 конфигурац туршиж байна...
+2025-12-19 07:26:21 - INFO - [bert_uncased] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 07:26:21 - INFO - [bert_uncased] Train: (31732, 768) | Val: (7933, 768) | Test: (9917, 768)
+2025-12-19 07:26:21 - INFO - 
+[bert_uncased] Конфигурац 1/8: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:26:21 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 07:26:30 - INFO - [bert_uncased] Config 1 - Val Accuracy: 0.7605 | Time: 8.19s
+2025-12-19 07:26:30 - INFO - 
+[bert_uncased] Конфигурац 2/8: {'n_estimators': 100, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:26:30 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 07:26:33 - INFO - [bert_uncased] Config 2 - Val Accuracy: 0.7653 | Time: 2.83s
+2025-12-19 07:26:33 - INFO - 
+[bert_uncased] Конфигурац 3/8: {'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:26:33 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 07:26:35 - INFO - [bert_uncased] Config 3 - Val Accuracy: 0.7653 | Time: 2.41s
+2025-12-19 07:26:35 - INFO - 
+[bert_uncased] Конфигурац 4/8: {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:26:35 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 07:26:40 - INFO - [bert_uncased] Config 4 - Val Accuracy: 0.7728 | Time: 4.31s
+2025-12-19 07:26:40 - INFO - 
+[bert_uncased] Конфигурац 5/8: {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:26:40 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 07:26:44 - INFO - [bert_uncased] Config 5 - Val Accuracy: 0.7781 | Time: 4.47s
+2025-12-19 07:26:44 - INFO - 
+[bert_uncased] Конфигурац 6/8: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:26:44 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 07:26:55 - INFO - [bert_uncased] Config 6 - Val Accuracy: 0.7798 | Time: 10.91s
+2025-12-19 07:26:55 - INFO - 
+[bert_uncased] Конфигурац 7/8: {'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.01, 'subsample': 0.9}
+2025-12-19 07:26:55 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 07:27:06 - INFO - [bert_uncased] Config 7 - Val Accuracy: 0.7624 | Time: 11.35s
+2025-12-19 07:27:06 - INFO - 
+[bert_uncased] Конфигурац 8/8: {'n_estimators': 500, 'max_depth': 7, 'learning_rate': 0.01, 'subsample': 0.8}
+2025-12-19 07:27:06 - INFO - [bert_uncased] Сургалт эхлэв...
+2025-12-19 07:27:30 - INFO - [bert_uncased] Config 8 - Val Accuracy: 0.7741 | Time: 23.01s
+2025-12-19 07:27:30 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:27:30 - INFO - [bert_uncased] ҮР ДҮН - VALIDATION
+2025-12-19 07:27:30 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:27:30 - INFO - [bert_uncased] Best Val Accuracy: 0.7798
+2025-12-19 07:27:30 - INFO - [bert_uncased] Best Config: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:27:30 - INFO - [bert_uncased] Top Configurations:
+2025-12-19 07:27:30 - INFO - [bert_uncased]   1. {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9} → Val Acc: 0.7798
+2025-12-19 07:27:30 - INFO - [bert_uncased]   2. {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8} → Val Acc: 0.7781
+2025-12-19 07:27:30 - INFO - [bert_uncased]   3. {'n_estimators': 500, 'max_depth': 7, 'learning_rate': 0.01, 'subsample': 0.8} → Val Acc: 0.7741
+2025-12-19 07:27:30 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:27:30 - INFO - [bert_uncased] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 07:27:30 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:27:30 - INFO - [bert_uncased] Test set дээр үнэлж байна...
+2025-12-19 07:27:30 - INFO - [bert_uncased] Test Accuracy: 0.7811
+2025-12-19 07:27:30 - INFO - [bert_uncased] Classification Report:
+2025-12-19 07:27:30 - INFO - [bert_uncased]                 precision    recall  f1-score   support
+2025-12-19 07:27:30 - INFO - [bert_uncased]       Negative       0.78      0.78      0.78      4940
+2025-12-19 07:27:30 - INFO - [bert_uncased]       Positive       0.78      0.78      0.78      4977
+2025-12-19 07:27:30 - INFO - [bert_uncased]       accuracy                           0.78      9917
+2025-12-19 07:27:30 - INFO - [bert_uncased]      macro avg       0.78      0.78      0.78      9917
+2025-12-19 07:27:30 - INFO - [bert_uncased]   weighted avg       0.78      0.78      0.78      9917
+2025-12-19 07:27:30 - INFO - [bert_uncased] Confusion Matrix:
+2025-12-19 07:27:30 - INFO - [bert_uncased]   TN= 3862 | FP= 1078
+2025-12-19 07:27:30 - INFO - [bert_uncased]   FN= 1093 | TP= 3884
+2025-12-19 07:27:30 - INFO - [bert_uncased] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 07:27:30 - DEBUG - [bert_uncased] Дэлгэрэнгүй үр дүн: logs\detailed_xgboost_gpu_bert_uncased_20251219_072621.csv
+2025-12-19 07:27:30 - INFO - [bert_uncased] Шилдэг модел: models\best_xgboost_gpu_bert_uncased_20251219_072621.pkl
+2025-12-19 07:27:30 - INFO - [bert_uncased] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 07:27:30 - INFO - ================================================================================
+
+2025-12-19 07:29:21 - INFO - 
+================================================================================
+2025-12-19 07:29:21 - INFO - НЭВТРЭХ: ROBERTA ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - XGBoost GPU
+2025-12-19 07:29:21 - INFO - ================================================================================
+2025-12-19 07:29:21 - INFO - Огноо ба цаг: 2025-12-19 07:29:21
+2025-12-19 07:29:21 - INFO - Эмбеддингийн төрөл: roberta
+2025-12-19 07:29:21 - INFO - Өгөгдлийн хэмжээ: (49582, 768)
+2025-12-19 07:29:21 - INFO - Лэйбэлийн тоо: 49582
+2025-12-19 07:29:21 - INFO - Төхөөрөмж: GPU
+2025-12-19 07:29:21 - INFO - [roberta] 8 конфигурац туршиж байна...
+2025-12-19 07:29:21 - INFO - [roberta] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 07:29:21 - INFO - [roberta] Train: (31732, 768) | Val: (7933, 768) | Test: (9917, 768)
+2025-12-19 07:29:21 - INFO - 
+[roberta] Конфигурац 1/8: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:29:21 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 07:29:23 - INFO - [roberta] Config 1 - Val Accuracy: 0.7476 | Time: 1.67s
+2025-12-19 07:29:23 - INFO - 
+[roberta] Конфигурац 2/8: {'n_estimators': 100, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:29:23 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 07:29:25 - INFO - [roberta] Config 2 - Val Accuracy: 0.7667 | Time: 1.91s
+2025-12-19 07:29:25 - INFO - 
+[roberta] Конфигурац 3/8: {'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:29:25 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 07:29:27 - INFO - [roberta] Config 3 - Val Accuracy: 0.7528 | Time: 1.73s
+2025-12-19 07:29:27 - INFO - 
+[roberta] Конфигурац 4/8: {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:29:27 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 07:29:30 - INFO - [roberta] Config 4 - Val Accuracy: 0.7624 | Time: 3.07s
+2025-12-19 07:29:30 - INFO - 
+[roberta] Конфигурац 5/8: {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:29:30 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 07:29:33 - INFO - [roberta] Config 5 - Val Accuracy: 0.7725 | Time: 2.85s
+2025-12-19 07:29:33 - INFO - 
+[roberta] Конфигурац 6/8: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:29:33 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 07:29:40 - INFO - [roberta] Config 6 - Val Accuracy: 0.7723 | Time: 6.40s
+2025-12-19 07:29:40 - INFO - 
+[roberta] Конфигурац 7/8: {'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.01, 'subsample': 0.9}
+2025-12-19 07:29:40 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 07:29:46 - INFO - [roberta] Config 7 - Val Accuracy: 0.7541 | Time: 6.68s
+2025-12-19 07:29:46 - INFO - 
+[roberta] Конфигурац 8/8: {'n_estimators': 500, 'max_depth': 7, 'learning_rate': 0.01, 'subsample': 0.8}
+2025-12-19 07:29:46 - INFO - [roberta] Сургалт эхлэв...
+2025-12-19 07:30:04 - INFO - [roberta] Config 8 - Val Accuracy: 0.7620 | Time: 17.68s
+2025-12-19 07:30:04 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:30:04 - INFO - [roberta] ҮР ДҮН - VALIDATION
+2025-12-19 07:30:04 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:30:04 - INFO - [roberta] Best Val Accuracy: 0.7725
+2025-12-19 07:30:04 - INFO - [roberta] Best Config: {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:30:04 - INFO - [roberta] Top Configurations:
+2025-12-19 07:30:04 - INFO - [roberta]   1. {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8} → Val Acc: 0.7725
+2025-12-19 07:30:04 - INFO - [roberta]   2. {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9} → Val Acc: 0.7723
+2025-12-19 07:30:04 - INFO - [roberta]   3. {'n_estimators': 100, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8} → Val Acc: 0.7667
+2025-12-19 07:30:04 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:30:04 - INFO - [roberta] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 07:30:04 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:30:04 - INFO - [roberta] Test set дээр үнэлж байна...
+2025-12-19 07:30:04 - INFO - [roberta] Test Accuracy: 0.7737
+2025-12-19 07:30:04 - INFO - [roberta] Classification Report:
+2025-12-19 07:30:04 - INFO - [roberta]                 precision    recall  f1-score   support
+2025-12-19 07:30:04 - INFO - [roberta]       Negative       0.77      0.77      0.77      4940
+2025-12-19 07:30:04 - INFO - [roberta]       Positive       0.77      0.78      0.78      4977
+2025-12-19 07:30:04 - INFO - [roberta]       accuracy                           0.77      9917
+2025-12-19 07:30:04 - INFO - [roberta]      macro avg       0.77      0.77      0.77      9917
+2025-12-19 07:30:04 - INFO - [roberta]   weighted avg       0.77      0.77      0.77      9917
+2025-12-19 07:30:04 - INFO - [roberta] Confusion Matrix:
+2025-12-19 07:30:04 - INFO - [roberta]   TN= 3806 | FP= 1134
+2025-12-19 07:30:04 - INFO - [roberta]   FN= 1110 | TP= 3867
+2025-12-19 07:30:04 - INFO - [roberta] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 07:30:04 - DEBUG - [roberta] Дэлгэрэнгүй үр дүн: logs\detailed_xgboost_gpu_roberta_20251219_072921.csv
+2025-12-19 07:30:04 - INFO - [roberta] Шилдэг модел: models\best_xgboost_gpu_roberta_20251219_072921.pkl
+2025-12-19 07:30:04 - INFO - [roberta] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 07:30:04 - INFO - ================================================================================
+
+2025-12-19 07:31:07 - INFO - 
+================================================================================
+2025-12-19 07:31:07 - INFO - НЭВТРЭХ: SBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - XGBoost GPU
+2025-12-19 07:31:07 - INFO - ================================================================================
+2025-12-19 07:31:07 - INFO - Огноо ба цаг: 2025-12-19 07:31:07
+2025-12-19 07:31:07 - INFO - Эмбеддингийн төрөл: sbert
+2025-12-19 07:31:07 - INFO - Өгөгдлийн хэмжээ: (49582, 384)
+2025-12-19 07:31:07 - INFO - Лэйбэлийн тоо: 49582
+2025-12-19 07:31:07 - INFO - Төхөөрөмж: GPU
+2025-12-19 07:31:07 - INFO - [sbert] 8 конфигурац туршиж байна...
+2025-12-19 07:31:07 - INFO - [sbert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 07:31:07 - INFO - [sbert] Train: (31732, 384) | Val: (7933, 384) | Test: (9917, 384)
+2025-12-19 07:31:07 - INFO - 
+[sbert] Конфигурац 1/8: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:31:07 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:31:08 - INFO - [sbert] Config 1 - Val Accuracy: 0.7557 | Time: 0.82s
+2025-12-19 07:31:08 - INFO - 
+[sbert] Конфигурац 2/8: {'n_estimators': 100, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:31:08 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:31:09 - INFO - [sbert] Config 2 - Val Accuracy: 0.7641 | Time: 1.16s
+2025-12-19 07:31:09 - INFO - 
+[sbert] Конфигурац 3/8: {'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:31:09 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:31:10 - INFO - [sbert] Config 3 - Val Accuracy: 0.7578 | Time: 1.02s
+2025-12-19 07:31:10 - INFO - 
+[sbert] Конфигурац 4/8: {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:31:10 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:31:12 - INFO - [sbert] Config 4 - Val Accuracy: 0.7702 | Time: 1.73s
+2025-12-19 07:31:12 - INFO - 
+[sbert] Конфигурац 5/8: {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:31:12 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:31:13 - INFO - [sbert] Config 5 - Val Accuracy: 0.7792 | Time: 1.63s
+2025-12-19 07:31:13 - INFO - 
+[sbert] Конфигурац 6/8: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:31:13 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:31:17 - INFO - [sbert] Config 6 - Val Accuracy: 0.7776 | Time: 3.54s
+2025-12-19 07:31:17 - INFO - 
+[sbert] Конфигурац 7/8: {'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.01, 'subsample': 0.9}
+2025-12-19 07:31:17 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:31:21 - INFO - [sbert] Config 7 - Val Accuracy: 0.7578 | Time: 3.82s
+2025-12-19 07:31:21 - INFO - 
+[sbert] Конфигурац 8/8: {'n_estimators': 500, 'max_depth': 7, 'learning_rate': 0.01, 'subsample': 0.8}
+2025-12-19 07:31:21 - INFO - [sbert] Сургалт эхлэв...
+2025-12-19 07:31:30 - INFO - [sbert] Config 8 - Val Accuracy: 0.7645 | Time: 9.57s
+2025-12-19 07:31:30 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:31:30 - INFO - [sbert] ҮР ДҮН - VALIDATION
+2025-12-19 07:31:30 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:31:30 - INFO - [sbert] Best Val Accuracy: 0.7792
+2025-12-19 07:31:30 - INFO - [sbert] Best Config: {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:31:30 - INFO - [sbert] Top Configurations:
+2025-12-19 07:31:30 - INFO - [sbert]   1. {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8} → Val Acc: 0.7792
+2025-12-19 07:31:30 - INFO - [sbert]   2. {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9} → Val Acc: 0.7776
+2025-12-19 07:31:30 - INFO - [sbert]   3. {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.05, 'subsample': 0.9} → Val Acc: 0.7702
+2025-12-19 07:31:30 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:31:30 - INFO - [sbert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 07:31:30 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:31:30 - INFO - [sbert] Test set дээр үнэлж байна...
+2025-12-19 07:31:30 - INFO - [sbert] Test Accuracy: 0.7738
+2025-12-19 07:31:30 - INFO - [sbert] Classification Report:
+2025-12-19 07:31:30 - INFO - [sbert]                 precision    recall  f1-score   support
+2025-12-19 07:31:30 - INFO - [sbert]       Negative       0.78      0.76      0.77      4940
+2025-12-19 07:31:30 - INFO - [sbert]       Positive       0.77      0.79      0.78      4977
+2025-12-19 07:31:30 - INFO - [sbert]       accuracy                           0.77      9917
+2025-12-19 07:31:30 - INFO - [sbert]      macro avg       0.77      0.77      0.77      9917
+2025-12-19 07:31:30 - INFO - [sbert]   weighted avg       0.77      0.77      0.77      9917
+2025-12-19 07:31:30 - INFO - [sbert] Confusion Matrix:
+2025-12-19 07:31:30 - INFO - [sbert]   TN= 3760 | FP= 1180
+2025-12-19 07:31:30 - INFO - [sbert]   FN= 1063 | TP= 3914
+2025-12-19 07:31:30 - INFO - [sbert] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 07:31:30 - DEBUG - [sbert] Дэлгэрэнгүй үр дүн: logs\detailed_xgboost_gpu_sbert_20251219_073107.csv
+2025-12-19 07:31:30 - INFO - [sbert] Шилдэг модел: models\best_xgboost_gpu_sbert_20251219_073107.pkl
+2025-12-19 07:31:30 - INFO - [sbert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 07:31:30 - INFO - ================================================================================
+
+2025-12-19 07:33:17 - INFO - 
+================================================================================
+2025-12-19 07:33:17 - INFO - НЭВТРЭХ: ALBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - XGBoost GPU
+2025-12-19 07:33:17 - INFO - ================================================================================
+2025-12-19 07:33:17 - INFO - Огноо ба цаг: 2025-12-19 07:33:17
+2025-12-19 07:33:17 - INFO - Эмбеддингийн төрөл: albert
+2025-12-19 07:33:17 - INFO - Өгөгдлийн хэмжээ: (49582, 768)
+2025-12-19 07:33:17 - INFO - Лэйбэлийн тоо: 49582
+2025-12-19 07:33:17 - INFO - Төхөөрөмж: GPU
+2025-12-19 07:33:17 - INFO - [albert] 8 конфигурац туршиж байна...
+2025-12-19 07:33:17 - INFO - [albert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 07:33:17 - INFO - [albert] Train: (31732, 768) | Val: (7933, 768) | Test: (9917, 768)
+2025-12-19 07:33:17 - INFO - 
+[albert] Конфигурац 1/8: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:33:17 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 07:33:19 - INFO - [albert] Config 1 - Val Accuracy: 0.7655 | Time: 1.60s
+2025-12-19 07:33:19 - INFO - 
+[albert] Конфигурац 2/8: {'n_estimators': 100, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:33:19 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 07:33:21 - INFO - [albert] Config 2 - Val Accuracy: 0.7711 | Time: 1.85s
+2025-12-19 07:33:21 - INFO - 
+[albert] Конфигурац 3/8: {'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:33:21 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 07:33:23 - INFO - [albert] Config 3 - Val Accuracy: 0.7614 | Time: 1.68s
+2025-12-19 07:33:23 - INFO - 
+[albert] Конфигурац 4/8: {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:33:23 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 07:33:26 - INFO - [albert] Config 4 - Val Accuracy: 0.7710 | Time: 3.03s
+2025-12-19 07:33:26 - INFO - 
+[albert] Конфигурац 5/8: {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:33:26 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 07:33:29 - INFO - [albert] Config 5 - Val Accuracy: 0.7749 | Time: 2.89s
+2025-12-19 07:33:29 - INFO - 
+[albert] Конфигурац 6/8: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:33:29 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 07:33:35 - INFO - [albert] Config 6 - Val Accuracy: 0.7793 | Time: 6.29s
+2025-12-19 07:33:35 - INFO - 
+[albert] Конфигурац 7/8: {'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.01, 'subsample': 0.9}
+2025-12-19 07:33:35 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 07:33:42 - INFO - [albert] Config 7 - Val Accuracy: 0.7652 | Time: 6.61s
+2025-12-19 07:33:42 - INFO - 
+[albert] Конфигурац 8/8: {'n_estimators': 500, 'max_depth': 7, 'learning_rate': 0.01, 'subsample': 0.8}
+2025-12-19 07:33:42 - INFO - [albert] Сургалт эхлэв...
+2025-12-19 07:34:00 - INFO - [albert] Config 8 - Val Accuracy: 0.7718 | Time: 17.53s
+2025-12-19 07:34:00 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:34:00 - INFO - [albert] ҮР ДҮН - VALIDATION
+2025-12-19 07:34:00 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:34:00 - INFO - [albert] Best Val Accuracy: 0.7793
+2025-12-19 07:34:00 - INFO - [albert] Best Config: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:34:00 - INFO - [albert] Top Configurations:
+2025-12-19 07:34:00 - INFO - [albert]   1. {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9} → Val Acc: 0.7793
+2025-12-19 07:34:00 - INFO - [albert]   2. {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8} → Val Acc: 0.7749
+2025-12-19 07:34:00 - INFO - [albert]   3. {'n_estimators': 500, 'max_depth': 7, 'learning_rate': 0.01, 'subsample': 0.8} → Val Acc: 0.7718
+2025-12-19 07:34:00 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:34:00 - INFO - [albert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 07:34:00 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:34:00 - INFO - [albert] Test set дээр үнэлж байна...
+2025-12-19 07:34:00 - INFO - [albert] Test Accuracy: 0.7782
+2025-12-19 07:34:00 - INFO - [albert] Classification Report:
+2025-12-19 07:34:00 - INFO - [albert]                 precision    recall  f1-score   support
+2025-12-19 07:34:00 - INFO - [albert]       Negative       0.78      0.77      0.78      4940
+2025-12-19 07:34:00 - INFO - [albert]       Positive       0.78      0.79      0.78      4977
+2025-12-19 07:34:00 - INFO - [albert]       accuracy                           0.78      9917
+2025-12-19 07:34:00 - INFO - [albert]      macro avg       0.78      0.78      0.78      9917
+2025-12-19 07:34:00 - INFO - [albert]   weighted avg       0.78      0.78      0.78      9917
+2025-12-19 07:34:00 - INFO - [albert] Confusion Matrix:
+2025-12-19 07:34:00 - INFO - [albert]   TN= 3805 | FP= 1135
+2025-12-19 07:34:00 - INFO - [albert]   FN= 1065 | TP= 3912
+2025-12-19 07:34:00 - INFO - [albert] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 07:34:00 - DEBUG - [albert] Дэлгэрэнгүй үр дүн: logs\detailed_xgboost_gpu_albert_20251219_073317.csv
+2025-12-19 07:34:00 - INFO - [albert] Шилдэг модел: models\best_xgboost_gpu_albert_20251219_073317.pkl
+2025-12-19 07:34:00 - INFO - [albert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 07:34:00 - INFO - ================================================================================
+
+2025-12-19 07:37:23 - INFO - 
+================================================================================
+2025-12-19 07:37:23 - INFO - НЭВТРЭХ: HATEBERT ЭМБЕДДИНГ АШИГЛАН СУРГАЛТ - XGBoost GPU
+2025-12-19 07:37:23 - INFO - ================================================================================
+2025-12-19 07:37:23 - INFO - Огноо ба цаг: 2025-12-19 07:37:23
+2025-12-19 07:37:23 - INFO - Эмбеддингийн төрөл: hatebert
+2025-12-19 07:37:23 - INFO - Өгөгдлийн хэмжээ: (49582, 768)
+2025-12-19 07:37:23 - INFO - Лэйбэлийн тоо: 49582
+2025-12-19 07:37:23 - INFO - Төхөөрөмж: GPU
+2025-12-19 07:37:23 - INFO - [hatebert] 8 конфигурац туршиж байна...
+2025-12-19 07:37:23 - INFO - [hatebert] Өгөгдлийг train/test хувааж байна (test_size=0.2)...
+2025-12-19 07:37:23 - INFO - [hatebert] Train: (31732, 768) | Val: (7933, 768) | Test: (9917, 768)
+2025-12-19 07:37:23 - INFO - 
+[hatebert] Конфигурац 1/8: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:37:23 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:37:25 - INFO - [hatebert] Config 1 - Val Accuracy: 0.7785 | Time: 1.46s
+2025-12-19 07:37:25 - INFO - 
+[hatebert] Конфигурац 2/8: {'n_estimators': 100, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:37:25 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:37:27 - INFO - [hatebert] Config 2 - Val Accuracy: 0.7814 | Time: 1.90s
+2025-12-19 07:37:27 - INFO - 
+[hatebert] Конфигурац 3/8: {'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:37:27 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:37:29 - INFO - [hatebert] Config 3 - Val Accuracy: 0.7829 | Time: 1.72s
+2025-12-19 07:37:29 - INFO - 
+[hatebert] Конфигурац 4/8: {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:37:29 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:37:32 - INFO - [hatebert] Config 4 - Val Accuracy: 0.7870 | Time: 3.10s
+2025-12-19 07:37:32 - INFO - 
+[hatebert] Конфигурац 5/8: {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}
+2025-12-19 07:37:32 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:37:35 - INFO - [hatebert] Config 5 - Val Accuracy: 0.7921 | Time: 2.86s
+2025-12-19 07:37:35 - INFO - 
+[hatebert] Конфигурац 6/8: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:37:35 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:37:41 - INFO - [hatebert] Config 6 - Val Accuracy: 0.7938 | Time: 6.31s
+2025-12-19 07:37:41 - INFO - 
+[hatebert] Конфигурац 7/8: {'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.01, 'subsample': 0.9}
+2025-12-19 07:37:41 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:37:48 - INFO - [hatebert] Config 7 - Val Accuracy: 0.7819 | Time: 6.65s
+2025-12-19 07:37:48 - INFO - 
+[hatebert] Конфигурац 8/8: {'n_estimators': 500, 'max_depth': 7, 'learning_rate': 0.01, 'subsample': 0.8}
+2025-12-19 07:37:48 - INFO - [hatebert] Сургалт эхлэв...
+2025-12-19 07:38:05 - INFO - [hatebert] Config 8 - Val Accuracy: 0.7872 | Time: 17.63s
+2025-12-19 07:38:05 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:38:05 - INFO - [hatebert] ҮР ДҮН - VALIDATION
+2025-12-19 07:38:05 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:38:05 - INFO - [hatebert] Best Val Accuracy: 0.7938
+2025-12-19 07:38:05 - INFO - [hatebert] Best Config: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9}
+2025-12-19 07:38:05 - INFO - [hatebert] Top Configurations:
+2025-12-19 07:38:05 - INFO - [hatebert]   1. {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.9} → Val Acc: 0.7938
+2025-12-19 07:38:05 - INFO - [hatebert]   2. {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8} → Val Acc: 0.7921
+2025-12-19 07:38:05 - INFO - [hatebert]   3. {'n_estimators': 500, 'max_depth': 7, 'learning_rate': 0.01, 'subsample': 0.8} → Val Acc: 0.7872
+2025-12-19 07:38:05 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:38:05 - INFO - [hatebert] ҮР ДҮН - TEST SET EVALUATION
+2025-12-19 07:38:05 - INFO - --------------------------------------------------------------------------------
+2025-12-19 07:38:05 - INFO - [hatebert] Test set дээр үнэлж байна...
+2025-12-19 07:38:06 - INFO - [hatebert] Test Accuracy: 0.7884
+2025-12-19 07:38:06 - INFO - [hatebert] Classification Report:
+2025-12-19 07:38:06 - INFO - [hatebert]                 precision    recall  f1-score   support
+2025-12-19 07:38:06 - INFO - [hatebert]       Negative       0.79      0.78      0.79      4940
+2025-12-19 07:38:06 - INFO - [hatebert]       Positive       0.78      0.80      0.79      4977
+2025-12-19 07:38:06 - INFO - [hatebert]       accuracy                           0.79      9917
+2025-12-19 07:38:06 - INFO - [hatebert]      macro avg       0.79      0.79      0.79      9917
+2025-12-19 07:38:06 - INFO - [hatebert]   weighted avg       0.79      0.79      0.79      9917
+2025-12-19 07:38:06 - INFO - [hatebert] Confusion Matrix:
+2025-12-19 07:38:06 - INFO - [hatebert]   TN= 3838 | FP= 1102
+2025-12-19 07:38:06 - INFO - [hatebert]   FN=  996 | TP= 3981
+2025-12-19 07:38:06 - INFO - [hatebert] Нэгдсэн үр дүн хадгалагдсан: logs\all_experiments_results.csv
+2025-12-19 07:38:06 - DEBUG - [hatebert] Дэлгэрэнгүй үр дүн: logs\detailed_xgboost_gpu_hatebert_20251219_073723.csv
+2025-12-19 07:38:06 - INFO - [hatebert] Шилдэг модел: models\best_xgboost_gpu_hatebert_20251219_073723.pkl
+2025-12-19 07:38:06 - INFO - [hatebert] АМЖИЛТТАЙ ДУУСЛАА!
+2025-12-19 07:38:06 - INFO - ================================================================================
+

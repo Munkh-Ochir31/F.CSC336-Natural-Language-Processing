@@ -16,6 +16,51 @@ import os
 from datetime import datetime
 import json
 import logging
+from pathlib import Path
+
+# GPU тохиргоо
+def setup_gpu():
+    """
+    GPU-г зөв тохируулах - memory growth, device visibility гэх мэт.
+    """
+    gpus = tf.config.list_physical_devices('GPU')
+    if gpus:
+        try:
+            # Memory growth-г идэвхжүүлэх (хэрэгцээтэй хэмжээгээр л эзэлнэ)
+            for gpu in gpus:
+                tf.config.experimental.set_memory_growth(gpu, True)
+            print(f"✓ {len(gpus)} GPU олдлоо:")
+            for i, gpu in enumerate(gpus):
+                print(f"  GPU {i}: {gpu.name}")
+            print(f"✓ GPU memory growth идэвхтэй")
+            return True
+        except RuntimeError as e:
+            print(f"⚠ GPU тохиргоонд алдаа: {e}")
+            return False
+    else:
+        print("⚠ GPU олдсонгүй - CPU ашиглана")
+        return False
+
+# GPU тохиргоо хийх
+setup_gpu()
+
+def load_config(config_path='config/lstm_config.json'):
+    """
+    Load configuration from JSON file.
+    
+    Args:
+        config_path: Path to config file
+        
+    Returns:
+        config: Configuration dictionary
+    """
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"Config файл олдсонгүй: {config_path}")
+    
+    with open(config_path, 'r', encoding='utf-8') as f:
+        config = json.load(f)
+    
+    return config
 
 def setup_logger(log_file):
     """
@@ -57,32 +102,36 @@ def setup_logger(log_file):
     
     return logger
 
-def load_embeddings(embedding_type):
+def load_embeddings(embedding_type, config, max_samples=None):
     """
     Load embeddings based on the specified type.
     
     Args:
         embedding_type: Type of embedding to load
+        config: Configuration dictionary
+        max_samples: Maximum number of samples to use (default: None = all)
         
     Returns:
         X: Feature embeddings
         y: Labels
     """
-    embedding_files = {
-        'bert_uncased': 'data/data of embedding/bert_embeddings_uncased.npy',
-        'bert_cased': 'data/data of embedding/bert_cased_embeddings.npy',
-        'roberta': 'data/data of embedding/roberta_embeddings.npy',
-        'albert': 'data/data of embedding/albert_embeddings.npy',
-        'sbert': 'data/data of embedding/sbert_embeddings.npy',
-        'hatebert': 'data/data of embedding/hatebert_embeddings.npy',
-        'word2vec': 'models/word2vec/document_embeddings.npy'
+    import torch
+    
+    # Get paths from config
+    base_path = config['paths']['embedding_base_path']
+    embedding_files = config['embeddings']
+    
+    # Build full paths
+    embedding_files_full = {
+        key: os.path.join(base_path, filename)
+        for key, filename in embedding_files.items()
     }
     
     if embedding_type not in embedding_files:
         raise ValueError(f"Embedding type '{embedding_type}' танигдахгүй байна. "
-                        f"Боломжтой сонголтууд: {list(embedding_files.keys())}")
+                        f"Боломжтой сонголтууд: {list(embedding_files_full.keys())}")
     
-    embedding_path = embedding_files[embedding_type]
+    embedding_path = embedding_files_full[embedding_type]
     
     if not os.path.exists(embedding_path):
         raise FileNotFoundError(f"Embedding файл олдсонгүй: {embedding_path}")
@@ -90,20 +139,31 @@ def load_embeddings(embedding_type):
     print(f"\nЭмбеддинг ачааллаж байна: {embedding_type}")
     print(f"Файлын зам: {embedding_path}")
     
-    # Load embeddings
-    X = np.load(embedding_path)
+    # Load embeddings from .pt file
+    X_tensor = torch.load(embedding_path, map_location='cpu')
     
-    # Load labels
-    if embedding_type == 'word2vec':
-        labels_path = 'models/word2vec/labels.npy'
+    # Convert tensor to numpy and handle 3D shape
+    if len(X_tensor.shape) == 3:
+        # Shape: (n_samples, seq_len, embedding_dim)
+        # Use mean pooling across sequence length
+        print(f"3D tensor илрүүлсэн: {X_tensor.shape}, mean pooling ашиглаж байна...")
+        X = X_tensor.mean(dim=1).numpy()  # (n_samples, embedding_dim)
     else:
-        labels_path = 'data/cleaned_label.csv'
+        X = X_tensor.numpy()
     
-    if labels_path.endswith('.npy'):
-        y = np.load(labels_path)
+    # Load labels from y.pt
+    y_path = f'{base_path}\\y.pt'
+    if os.path.exists(y_path):
+        y_tensor = torch.load(y_path, map_location='cpu')
+        y = y_tensor.numpy()
     else:
-        df = pd.read_csv(labels_path)
-        y = df['sentiment_label'].values
+        raise FileNotFoundError(f"Label файл олдсонгүй: {y_path}")
+    
+    # Limit samples if specified
+    if max_samples is not None and max_samples < len(X):
+        print(f"Эхний {max_samples} sample ашиглаж байна...")
+        X = X[:max_samples]
+        y = y[:max_samples]
     
     print(f"Эмбеддингийн хэмжээ: {X.shape}")
     print(f"Лэйбэлийн тоо: {len(y)}")
@@ -146,7 +206,7 @@ def create_lstm_model(input_dim, lstm_units=128, dropout_rate=0.3, bidirectional
     
     return model
 
-def LSTMModel(X, y, embedding_type, log_dir='logs', test_size=0.2, epochs=20, batch_size=32):
+def LSTMModel(X, y, embedding_type, config):
     """
     Train LSTM model and save results to log file.
     
@@ -154,11 +214,26 @@ def LSTMModel(X, y, embedding_type, log_dir='logs', test_size=0.2, epochs=20, ba
         X: Feature embeddings
         y: Labels
         embedding_type: Type of embedding used
-        log_dir: Directory to save log files
-        test_size: Proportion of dataset to include in test split
-        epochs: Number of training epochs
-        batch_size: Batch size for training
+        config: Configuration dictionary
     """
+    # Check GPU availability
+    print("\n" + "="*80)
+    print("ТӨХӨӨРӨМЖИЙН МЭДЭЭЛЭЛ")
+    print("="*80)
+    gpu_available = len(tf.config.list_physical_devices('GPU')) > 0
+    if gpu_available:
+        print("✓ GPU дээр сургалт явуулна")
+        print(f"  TensorFlow GPU хувилбар: {tf.test.is_built_with_cuda()}")
+        print(f"  Боломжтой GPU-ийн тоо: {len(tf.config.list_physical_devices('GPU'))}")
+    else:
+        print("⚠ CPU дээр сургалт явуулна (GPU олдсонгүй)")
+    print("="*80 + "\n")
+    
+    # Get parameters from config
+    log_dir = config['paths']['log_dir']
+    test_size = config['training']['test_size']
+    epochs = config['training']['epochs']
+    batch_size = config['training']['batch_size']
     # Create log directory if it doesn't exist
     os.makedirs(log_dir, exist_ok=True)
     
@@ -179,14 +254,12 @@ def LSTMModel(X, y, embedding_type, log_dir='logs', test_size=0.2, epochs=20, ba
         logger.info(f"Эмбеддингийн төрөл: {embedding_type}")
         logger.info(f"Өгөгдлийн хэмжээ: {X.shape}")
         logger.info(f"Лэйбэлийн тоо: {len(y)}")
+        logger.info(f"Төхөөрөмж: {'GPU' if gpu_available else 'CPU'}")
+        if gpu_available:
+            logger.info(f"GPU-ийн тоо: {len(tf.config.list_physical_devices('GPU'))}")
         
-        # Hyperparameters to try
-        configs = [
-            {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001},
-            {'lstm_units': 128, 'dropout': 0.5, 'bidirectional': False, 'lr': 0.001},
-            {'lstm_units': 256, 'dropout': 0.3, 'bidirectional': False, 'lr': 0.001},
-            {'lstm_units': 128, 'dropout': 0.3, 'bidirectional': True, 'lr': 0.001},
-        ]
+        # Get hyperparameters from config
+        configs = config['hyperparameters']
         
         logger.info(f"[{embedding_type}] {len(configs)} конфигурац туршиж байна...")
         
@@ -206,36 +279,49 @@ def LSTMModel(X, y, embedding_type, log_dir='logs', test_size=0.2, epochs=20, ba
         best_config = None
         results_list = []
         
-        for idx, config in enumerate(configs, 1):
-            logger.info(f"\n[{embedding_type}] Конфигурац {idx}/{len(configs)}: {config}")
+        for idx, config_item in enumerate(configs, 1):
+            logger.info(f"\n[{embedding_type}] Конфигурац {idx}/{len(configs)}: {config_item}")
             
             start_time = time.time()
             
             # Create model
             model = create_lstm_model(
                 input_dim=X.shape[1],
-                lstm_units=config['lstm_units'],
-                dropout_rate=config['dropout'],
-                bidirectional=config['bidirectional']
+                lstm_units=config_item['lstm_units'],
+                dropout_rate=config_item['dropout'],
+                bidirectional=config_item['bidirectional']
             )
             
             # Set learning rate
-            model.optimizer.learning_rate.assign(config['lr'])
+            model.optimizer.learning_rate.assign(config_item['lr'])
             
-            # Callbacks
-            early_stop = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
-            reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=3, min_lr=1e-6)
+            # Callbacks from config
+            early_stop_cfg = config['callbacks']['early_stopping']
+            reduce_lr_cfg = config['callbacks']['reduce_lr']
             
-            # Train model
-            logger.info(f"[{embedding_type}] Сургалт эхлэв...")
-            history = model.fit(
-                X_train, y_train,
-                validation_data=(X_val, y_val),
-                epochs=epochs,
-                batch_size=batch_size,
-                callbacks=[early_stop, reduce_lr],
-                verbose=0
+            early_stop = EarlyStopping(
+                monitor=early_stop_cfg['monitor'],
+                patience=early_stop_cfg['patience'],
+                restore_best_weights=early_stop_cfg['restore_best_weights']
             )
+            reduce_lr = ReduceLROnPlateau(
+                monitor=reduce_lr_cfg['monitor'],
+                factor=reduce_lr_cfg['factor'],
+                patience=reduce_lr_cfg['patience'],
+                min_lr=reduce_lr_cfg['min_lr']
+            )
+            
+            # Train model with GPU utilization
+            logger.info(f"[{embedding_type}] Сургалт эхлэв...")
+            with tf.device('/GPU:0' if gpu_available else '/CPU:0'):
+                history = model.fit(
+                    X_train, y_train,
+                    validation_data=(X_val, y_val),
+                    epochs=epochs,
+                    batch_size=batch_size,
+                    callbacks=[early_stop, reduce_lr],
+                    verbose=0
+                )
             
             train_time = time.time() - start_time
             
@@ -245,7 +331,7 @@ def LSTMModel(X, y, embedding_type, log_dir='logs', test_size=0.2, epochs=20, ba
             logger.info(f"[{embedding_type}] Config {idx} - Val Accuracy: {val_acc:.4f} | Time: {train_time:.2f}s")
             
             results_list.append({
-                'config': config,
+                'config': config_item,
                 'val_acc': val_acc,
                 'val_loss': val_loss,
                 'train_time': train_time
@@ -255,7 +341,7 @@ def LSTMModel(X, y, embedding_type, log_dir='logs', test_size=0.2, epochs=20, ba
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
                 best_model = model
-                best_config = config
+                best_config = config_item
 
         logger.info("-"*80)
         logger.info(f"[{embedding_type}] ҮР ДҮН - VALIDATION")
@@ -335,7 +421,7 @@ def LSTMModel(X, y, embedding_type, log_dir='logs', test_size=0.2, epochs=20, ba
         logger.debug(f"[{embedding_type}] Дэлгэрэнгүй үр дүн: {detailed_csv}")
         
         # Save best model to models directory
-        models_dir = "models"
+        models_dir = config['paths']['models_dir']
         os.makedirs(models_dir, exist_ok=True)
         model_file = os.path.join(models_dir, f"best_lstm_{embedding_type}_{timestamp}.h5")
         best_model.save(model_file)
@@ -356,31 +442,41 @@ if __name__ == "__main__":
     parser.add_argument(
         '--embedding',
         type=str,
-        default='bert_uncased',
-        choices=['bert_uncased', 'bert_cased', 'roberta', 'albert', 'sbert', 'hatebert', 'word2vec'],
-        help='Ашиглах эмбеддингийн төрөл (default: bert_uncased)'
+        default='bert_cased',
+        help='Ашиглах эмбеддингийн төрөл (default: bert_cased)'
     )
     parser.add_argument(
-        '--epochs',
-        type=int,
-        default=20,
-        help='Сургалтын эпох тоо (default: 20)'
+        '--config',
+        type=str,
+        default='config/lstm_config.json',
+        help='Config файлын зам (default: config/lstm_config.json)'
     )
     parser.add_argument(
-        '--batch_size',
+        '--max_samples',
         type=int,
-        default=32,
-        help='Batch size (default: 32)'
+        default=None,
+        help='Ашиглах дээд sample тоо (config-г давж бичнэ)'
     )
     
     args = parser.parse_args()
     
+    # Load config
+    print("Config ачаалж байна...")
+    config = load_config(args.config)
+    
+    # Override max_samples from command line if provided
+    max_samples = args.max_samples if args.max_samples else config['training'].get('max_samples')
+    
+    print(f"Config файл: {args.config}")
+    print(f"Embedding: {args.embedding}")
+    print(f"Max samples: {max_samples}")
+    
     # Load embeddings
-    X, y = load_embeddings(args.embedding)
+    X, y = load_embeddings(args.embedding, config, max_samples=max_samples)
     
     # Train model
     print(f"\nЭмбеддинг: {args.embedding.upper()}")
-    model = LSTMModel(X, y, args.embedding, epochs=args.epochs, batch_size=args.batch_size)
+    model = LSTMModel(X, y, args.embedding, config)
 
 # Жишээ:
 # python src/models/LSTM.py --embedding bert_uncased
