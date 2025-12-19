@@ -554,7 +554,7 @@ LSTM нь **3D тогтолцоон** (samples, timesteps, features) шаард�
 - **Frameworks**: scikit-learn, numpy, pandas
 - **Онцлог**: Хувийн зөөврийн компьютер дээр сургалт хийсэн
 
-**Random Forest (Ногооны PC дээр хийсэн):**
+**Random Forest (Laptop дээр хийсэн):**
 - **CPU**: Intel Core i7 
 - **RAM**: 32GB DDR4
 - **OS**: Windows 10/11
