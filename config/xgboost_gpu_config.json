@@ -1,0 +1,39 @@
+{
+  "model_name": "XGBoost GPU",
+  
+  "data": {
+    "test_size": 0.2,
+    "val_size": 0.2,
+    "random_state": 42
+  },
+  
+  "device": {
+    "tree_method": "gpu_hist",
+    "predictor": "gpu_predictor",
+    "gpu_id": 0
+  },
+  
+  "hyperparameters": [
+    {"n_estimators": 100, "max_depth": 3, "learning_rate": 0.1, "subsample": 0.8},
+    {"n_estimators": 100, "max_depth": 5, "learning_rate": 0.1, "subsample": 0.8},
+    {"n_estimators": 200, "max_depth": 3, "learning_rate": 0.05, "subsample": 0.9},
+    {"n_estimators": 200, "max_depth": 5, "learning_rate": 0.05, "subsample": 0.9},
+    {"n_estimators": 300, "max_depth": 4, "learning_rate": 0.1, "subsample": 0.8},
+    {"n_estimators": 300, "max_depth": 6, "learning_rate": 0.05, "subsample": 0.9},
+    {"n_estimators": 500, "max_depth": 5, "learning_rate": 0.01, "subsample": 0.9},
+    {"n_estimators": 500, "max_depth": 7, "learning_rate": 0.01, "subsample": 0.8}
+  ],
+  
+  "fixed_params": {
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "colsample_bytree": 0.8,
+    "random_state": 42
+  },
+  
+  "output": {
+    "model_prefix": "xgboost_gpu",
+    "detailed_log_template": "logs/detailed_xgboost_gpu_{embedding}_{timestamp}.csv",
+    "model_save_template": "models/best_xgboost_gpu_{embedding}_{timestamp}.pkl"
+  }
+}

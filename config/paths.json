@@ -1,0 +1,26 @@
+{
+  "data": {
+    "raw_data_dir": "data/aclImdb",
+    "cleaned_data": "data/cleaned.csv",
+    "cleaned_labels": "data/cleaned_label.csv",
+    "embedding_dir": "data/data of embedding"
+  },
+  
+  "embeddings": {
+    "albert": "data/data of embedding/albert_embeddings.npy",
+    "bert_cased": "data/data of embedding/bert_cased_embeddings.npy",
+    "bert_uncased": "data/data of embedding/bert_embeddings_uncased.npy",
+    "hatebert": "data/data of embedding/hatebert_embeddings.npy",
+    "roberta": "data/data of embedding/roberta_embeddings.npy",
+    "sbert": "data/data of embedding/sbert_embeddings.npy",
+    "word2vec_model": "models/word2vec/word2vec_imdb.model",
+    "word2vec_embeddings": "models/word2vec/document_embeddings.npy",
+    "word2vec_labels": "models/word2vec/labels.npy"
+  },
+  
+  "output": {
+    "logs_dir": "logs",
+    "models_dir": "models",
+    "results_file": "logs/all_experiments_results.csv"
+  }
+}

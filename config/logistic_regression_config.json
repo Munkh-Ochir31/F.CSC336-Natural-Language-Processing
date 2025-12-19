@@ -1,0 +1,27 @@
+{
+  "model_name": "Logistic Regression",
+  
+  "data": {
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  
+  "hyperparameters": {
+    "C": [0.01, 0.1, 1, 10],
+    "solver": ["liblinear", "saga"],
+    "max_iter": [500, 1000],
+    "penalty": ["l2"],
+    "class_weight": ["balanced"]
+  },
+  
+  "cross_validation": {
+    "cv": 5,
+    "scoring": "accuracy",
+    "n_jobs": -1
+  },
+  
+  "output": {
+    "model_prefix": "logistic_regression",
+    "detailed_log_template": "logs/detailed_lr_{embedding}_{timestamp}.csv"
+  }
+}

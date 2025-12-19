@@ -15,6 +15,9 @@ import os
 from datetime import datetime
 import json
 import logging
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.config_loader import load_config, get_path, resolve_path, ensure_dir
 
 def setup_logger(log_file):
     """
@@ -56,32 +59,26 @@ def setup_logger(log_file):
     
     return logger
 
-def load_embeddings(embedding_type):
+def load_embeddings(embedding_type, paths_config):
     """
     Load embeddings based on the specified type.
     
     Args:
         embedding_type: Type of embedding to load
+        paths_config: Loaded paths configuration
         
     Returns:
         X: Feature embeddings
         y: Labels
     """
-    embedding_files = {
-        'bert_uncased': 'data/data of embedding/bert_embeddings_uncased.npy',
-        'bert_cased': 'data/data of embedding/bert_cased_embeddings.npy',
-        'roberta': 'data/data of embedding/roberta_embeddings.npy',
-        'albert': 'data/data of embedding/albert_embeddings.npy',
-        'sbert': 'data/data of embedding/sbert_embeddings.npy',
-        'hatebert': 'data/data of embedding/hatebert_embeddings.npy',
-        'word2vec': 'models/word2vec/document_embeddings.npy'
-    }
-    
-    if embedding_type not in embedding_files:
-        raise ValueError(f"Embedding type '{embedding_type}' танигдахгүй байна. "
-                        f"Боломжтой сонголтууд: {list(embedding_files.keys())}")
-    
-    embedding_path = embedding_files[embedding_type]
+    # Get embedding path from config
+    try:
+        if embedding_type == 'word2vec':
+            embedding_path = resolve_path(get_path(paths_config, 'embeddings', 'word2vec_embeddings'))
+        else:
+            embedding_path = resolve_path(get_path(paths_config, 'embeddings', embedding_type))
+    except KeyError:
+        raise ValueError(f"Embedding type '{embedding_type}' танигдахгүй байна config файлд")
     
     if not os.path.exists(embedding_path):
         raise FileNotFoundError(f"Embedding файл олдсонгүй: {embedding_path}")
@@ -94,9 +91,9 @@ def load_embeddings(embedding_type):
     
     # Load labels
     if embedding_type == 'word2vec':
-        labels_path = 'models/word2vec/labels.npy'
+        labels_path = resolve_path(get_path(paths_config, 'embeddings', 'word2vec_labels'))
     else:
-        labels_path = 'data/cleaned_label.csv'
+        labels_path = resolve_path(get_path(paths_config, 'data', 'cleaned_label'))
     
     if labels_path.endswith('.npy'):
         y = np.load(labels_path)
@@ -109,7 +106,7 @@ def load_embeddings(embedding_type):
     
     return X, y
 
-def LogisticRegress(X, y, embedding_type, log_dir='logs', test_size=0.2):
+def LogisticRegress(X, y, embedding_type, lr_config, paths_config):
     """
     Train Logistic Regression with Grid Search and save results to log file.
     
@@ -117,13 +114,29 @@ def LogisticRegress(X, y, embedding_type, log_dir='logs', test_size=0.2):
         X: Feature embeddings
         y: Labels
         embedding_type: Type of embedding used
-        log_dir: Directory to save log files
-        test_size: Proportion of dataset to include in test split
+        lr_config: Loaded Logistic Regression configuration
+        paths_config: Loaded paths configuration
     """
     from sklearn.model_selection import train_test_split
     
-    # Create log directory if it doesn't exist
-    os.makedirs(log_dir, exist_ok=True)
+    # Get parameters from config
+    test_size = lr_config.get('test_size', 0.2)
+    random_state = lr_config.get('random_state', 42)
+    cv_folds = lr_config.get('cv_folds', 5)
+    param_grid = lr_config.get('param_grid', {
+        'C': [0.01, 0.1, 1, 10],
+        'penalty': ['l2'],
+        'solver': ['liblinear', 'saga'],
+        'max_iter': [500, 1000]
+    })
+    
+    # Get output paths from config
+    log_dir = resolve_path(get_path(paths_config, 'output', 'logs'))
+    models_dir = resolve_path(get_path(paths_config, 'output', 'models'))
+    
+    # Create directories
+    ensure_dir(log_dir)
+    ensure_dir(models_dir)
     
     # Single log file for all embeddings
     log_file = os.path.join(log_dir, "logistic_regression_experiments.log")
@@ -143,20 +156,13 @@ def LogisticRegress(X, y, embedding_type, log_dir='logs', test_size=0.2):
         logger.info(f"Өгөгдлийн хэмжээ: {X.shape}")
         logger.info(f"Лэйбэлийн тоо: {len(y)}")
         
-        lr_param_grid = {
-            'C': [0.01, 0.1, 1, 10],
-            'penalty': ['l2'],
-            'solver': ['liblinear', 'saga'],
-            'max_iter': [500, 1000]
-        }
-        
         logger.debug(f"[{embedding_type}] Параметрүүдийн Grid:")
-        logger.debug(json.dumps(lr_param_grid, indent=2))
+        logger.debug(json.dumps(param_grid, indent=2))
         
         # Split data into train and test sets
         logger.info(f"[{embedding_type}] Өгөгдлийг train/test хувааж байна (test_size={test_size})...")
         X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=test_size, random_state=42, stratify=y
+            X, y, test_size=test_size, random_state=random_state, stratify=y
         )
         logger.info(f"[{embedding_type}] Train: {X_train.shape} | Test: {X_test.shape}")
 
@@ -164,14 +170,14 @@ def LogisticRegress(X, y, embedding_type, log_dir='logs', test_size=0.2):
 
         # Create model
         logger.info(f"[{embedding_type}] Logistic Regression модел үүсгэж байна...")
-        lr_model = LogisticRegression(random_state=42)
+        lr_model = LogisticRegression(random_state=random_state)
 
         # Grid search with cross-validation
-        logger.info(f"[{embedding_type}] Grid Search with 5-Fold CV эхлүүлж байна...")
+        logger.info(f"[{embedding_type}] Grid Search with {cv_folds}-Fold CV эхлүүлж байна...")
         lr_grid = GridSearchCV(
             estimator=lr_model,
-            param_grid=lr_param_grid,
-            cv=5,
+            param_grid=param_grid,
+            cv=cv_folds,
             scoring='accuracy',
             n_jobs=-1,
             verbose=2
@@ -256,9 +262,7 @@ def LogisticRegress(X, y, embedding_type, log_dir='logs', test_size=0.2):
         results_df.to_csv(detailed_csv, index=False)
         logger.debug(f"[{embedding_type}] Дэлгэрэнгүй grid search үр дүн: {detailed_csv}")
         
-        # Save best model to models directory
-        models_dir = "models"
-        os.makedirs(models_dir, exist_ok=True)
+        # Save best model
         model_file = os.path.join(models_dir, f"best_model_{embedding_type}_{timestamp}.pkl")
         with open(model_file, 'wb') as f:
             pickle.dump(lr_grid.best_estimator_, f)
@@ -283,15 +287,25 @@ if __name__ == "__main__":
         choices=['bert_uncased', 'bert_cased', 'roberta', 'albert', 'sbert', 'hatebert', 'word2vec'],
         help='Ашиглах эмбеддингийн төрөл (default: bert_uncased)'
     )
+    parser.add_argument(
+        '--config-dir',
+        type=str,
+        default='config',
+        help='Config файлуудын хавтас (default: config)'
+    )
     
     args = parser.parse_args()
     
+    # Load configurations
+    paths_config = load_config(os.path.join(args.config_dir, 'paths.json'))
+    lr_config = load_config(os.path.join(args.config_dir, 'logistic_regression_config.json'))
+    
     # Load embeddings
-    X, y = load_embeddings(args.embedding)
+    X, y = load_embeddings(args.embedding, paths_config)
     
     # Train model
     print(f"\nЭмбеддинг: {args.embedding.upper()}")
-    model = LogisticRegress(X, y, args.embedding)
+    model = LogisticRegress(X, y, args.embedding, lr_config, paths_config)
 
 #     # BERT uncased (default)
 # python src/models/logisticRegress.py --embedding bert_uncased

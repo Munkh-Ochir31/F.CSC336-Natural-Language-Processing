@@ -1,0 +1,29 @@
+{
+  "model_name": "Random Forest",
+  
+  "data": {
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  
+  "hyperparameters": {
+    "n_estimators": [50, 100, 200, 300, 400],
+    "max_depth": [10, 20],
+    "min_samples_split": [2, 5],
+    "min_samples_leaf": [1],
+    "max_features": ["sqrt"],
+    "bootstrap": [true],
+    "class_weight": ["balanced"]
+  },
+  
+  "cross_validation": {
+    "cv": 5,
+    "scoring": "accuracy",
+    "n_jobs": -1
+  },
+  
+  "output": {
+    "model_prefix": "random_forest",
+    "detailed_log_template": "logs/detailed_rf_{embedding}_{timestamp}.csv"
+  }
+}
